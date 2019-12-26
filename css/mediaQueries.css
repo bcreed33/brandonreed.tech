@@ -1,0 +1,29 @@
+ /* Portrait and Landscape */
+@media only screen
+  and (min-device-width:250px)
+  and (max-device-width:800px)
+  /*and (-webkit-min-device-pixel-ratio: 2)*/ {
+      .photoSection1{
+
+          background:url("../img/newHero2xsmall.png")no-repeat center center !important;
+background-size: cover!important;
+      }
+
+      .photoSection2{
+
+          background:url("../img/newHero4xsmall.png")no-repeat center center !important;
+background-size: cover!important;
+      }
+      .photoSection3{
+
+          background:url("../img/newHero3xsmall.png")no-repeat center center !important;
+background-size: cover!important;
+      }
+      .heroBackgroundImage {
+    background: url("../img/newHero1.png") !important;
+    overflow: hidden !important;
+    background-position-x: right;
+    background-position-y: top;}
+
+
+}

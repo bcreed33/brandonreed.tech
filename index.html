@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N27SMMD');</script>
+  <!-- End Google Tag Manager -->
+<meta name="keywords" content="photographer, photography, design, web developer graphic designer, web developer, web designer, graphic artist, visual designer, visual artist">
+<meta name="description" content="Hello my name is Brandon Reed, and this my portfilio website. I am a front end web developer, a graphic designer, and a photohrapher. I am located in the Pittsburgh area, and currently taking on more freelance clients. "/>
+<meta name="viewport" content="initial-scale=1.0,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta charset="utf-8">
+<link href="img/favicon.ico" type="image/x-icon" rel="shorcut icon">
+<title>Brandon Reed - Web Developer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--structured Data-->
+<script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "CreativeWorkSeries",
+        "name":"Brandon Reed",
+        "url":"http://letsreedesign.com/",
+        "image":"http://letsreedesign.com/img/letterB.png",
+        "headline":"Welcome to Brandon Reed's portfolio website!",
+        "sameAs":["https://www.facebook.com/letseedesign.photo",
+        "https://www.instagram.com/reedesign.photo/",
+        "https://letsreedesign.smugmug.com/",
+        "https://www.linkedin.com/in/brandonreedesign"],
+        "keywords":"photographer, photography, design, web, developer, graphic designer, web developer, web designer, graphic artist, visual designer, visual artist"
+    }
+</script>
+<!-- All my custom css code"-->
+<link href="css/sideBox.css" rel="stylesheet">
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/mediaQueries.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <nav class="navbar navbar-default" id="main">
+      <div class="container">
+          <!--Need this for the mobile toggel button -->
+          <div class="navbar-header">
+              <!-- brand/logo image and link-->
+              <a href="#homeScroll" class="scroll"></a>
+              <div class="navBarLogo">
+                  <a href="#homeScroll" class="scroll homeLink activeNavLink"><img alt="Brand Reed name logo" src="img/svgicons/navbarLogo.svg" ></a>
+              </div>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="navLi">
+                      <a href="#homeScroll" class="scroll homeLink activeNavLink" onclick="getAtt(this)">Home</a>
+                  </li>
+                  <li class="navLi">
+                      <a href="#skillScroll" class="scroll skillLink collapsed">About</a>
+                  </li>
+                  <!--<li>
+                      <a href="#skillScroll" class="scroll skillLink collapsed">Services</a>
+                  </li>-->
+                  <li class="navLi">
+                      <a href="#portScroll" class="scroll portfolioLink collapsed">Portfolio</a>
+                  </li>
+                  <li class="navLi">
+                      <a href="#contactScroll" class="scroll contactLink collapsed" onclick="getAtt(this)">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+<a name="home" id="homeScroll"></a>
+<main>
+<div class="heroBackgroundImage">
+    <div class="heroblackOpicty">
+        <div class="herobox">
+            <div id="heroGraphicTitel">
+                <div class="containerHeroGraphic">
+                    <div class="forgroundSection">
+                        <div class="fristName">Brandon</div>
+                        <div class="lastName">Reed</div>
+                        <div class="mytitle"><p>
+                          Front End Developer
+                        </p> <hr /> </div>
+                    </div>
+                    <div class="standAlonelogo"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<a name="skill" id="skillScroll"></a>
+
+<!--
+<a name="contact" id="bioScroll"></a>
+<div class="containe-fluid sectionSpacing orangeSec">
+    <div class="container">
+        <div class="row contactSection">
+            <div class="col-md-8 col-sm-10 col-xs-12 myblurb">
+                <div class="iconSection">
+                    <img src="img/svgicons/003-people-white.svg" alt="who am I icon">
+                    <h2 class="iconTitle">Who I Am</h2>
+                </div>
+                <p>
+                </p>
+
+                <p>Welcome! Welcome! My name is Brandon Reed and I'm a Front-End Web Developer with a great sense of design.
+                  Currenly I'm the Web Developer for the Pittsburgh based company 4moms.
+
+                </p>
+                <p>
+                  I have designed and develop a handful of custom wordpress website for personal protection agencies to local churches.
+                  I'm the photographer for the Pittsburgh Steeline and freelance for a few local churchs.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="containe-fluid  sectionSpacing orangeSec">
+    <div class="container">
+        <div class="row">
+          <div class="skillprogram">
+            <div class="iconSection">
+                <img src="img/svgicons/005-tools-and-utensils.svg" alt="Skill icon">
+                <h2 class="iconTitle">Skill Set</h2>
+            </div>
+
+            <div class="" style="margin-bottom:15px;">
+            <ul class="talentList">
+                <li>HTML / HAML</li>
+                <li>CSS / SASS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap / Foundation</li>
+                <li>WordPress</li>
+                <li>Structured Data</li>
+                <li>UI / UX Design</li>
+                <li>Responsive Development</li>
+            </ul>
+            </div>
+          </div>
+        <div class="skillprogram">
+            <div class="iconSection" >
+                <img src="img/svgicons/004-technology.svg" alt="Programs icon">
+                <h2 class="iconTitle">Programs I Use</h2>
+            </div>
+              <div class="">
+            <ul class="talentList">
+                <li>GitHub / Gitlab</li>
+                <li>Visual Studios</li>
+                <li>Atom.io</li>
+                <li>Sketch</li>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>Lightroom</li>
+           </ul>
+           </div>
+         </div>
+        </div>
+    </div>
+</div>
+
+
+<a name="portfolio" id="portScroll"></a>
+<div class="container-fluid sectionSpacing ">
+    <div class="container">
+        <div class="row text-center">
+            <div class="iconSection">
+                <img src="img/svgicons/001-technology-1-orange.svg" alt="portfolio icon">
+                <h2 class="iconTitle">My Portfolio</h2>
+            </div>
+            <div id="webDesign" class='portfolioSection'>
+                <section class="cd-team cd-section">
+                    <div class="cd-container">
+                        <ul>
+                          <li>
+                              <a href="#0" data-type="member-5">
+                                  <div class="portPeicePreview" id="goingpreview">
+                                      <h3>Going Deeper</h3>
+                                  </div>
+                              </a>
+                              <button data-type="member-5">More Info</button>
+                          </li>
+                             <li>
+                                <a href="#0" data-type="member-4">
+                                    <div class="portPeicePreview" id="batterspreview">
+                                        <h3>The Batters Box</h3>
+                                    </div>
+                                </a>
+                                <button data-type="member-4">More Info</button>
+                            </li>
+                            <li>
+                                <a href="#0" data-type="member-1">
+                                    <div class="portPeicePreview" id="inspirapreview">
+                                        <h3>Inspira</h3>
+                                    </div>
+                                </a>
+                                <button data-type="member-1">More Info</button>
+                            </li>
+                            <li>
+                                <a href="#0" data-type="member-2">
+                                    <div class="portPeicePreview" id="tapolcipreview">
+                                        <h3>Tapolci Foundation</h3>
+                                    </div>
+                                </a>
+                                <button data-type="member-2">More Info</button>
+                            </li>
+                     </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="currentProject container-fluid" style="">
+    <div class="container text-center">
+
+        <h2>GitHub Projects</h2>
+        <p>Check out my JavaScript apps and the rest of my current projects on my GitHub page.</p>
+        <a href="https://github.com/bcreed33" target="_blank" class="button">Visit</a>
+
+    </div>
+</div>
+
+
+
+
+
+
+<a name="contact" id="bioScroll"></a>
+<div class="containe-fluid sectionSpacing">
+    <div class="container">
+        <div class="row contactSection">
+            <div class="col-md-8 col-sm-10 col-xs-12 myblurb">
+                <div class="iconSection">
+                    <img src="img/svgicons/003-people-orange.svg" alt="who am I icon">
+                    <h2 class="iconTitle">Who I Am</h2>
+                </div>
+                <p>Hello, my name is Brandon! Nice to meet you!
+                </p>
+                <p>I am a Front-End Web Developer with a great sense of design. I hold an Associate Degree in both Web Development and Graphic Design. I am also an aspiring photographer and have been freelancing for the past five years.
+                </p>
+                <p>Web development is by far my strongest skill and passion. I have professional experience as a graphic designer and photographer and they both have helped me tremendously in the design and development of all my websites.
+                   I have developed small WordPress websites for local businesses too large robust websites for financial institutes.
+                </p>
+                <p>Currently, I am growing my skills in javascript and angular in hopes to become an Angular developer. If you're interested in doing some work with me, feel free to shoot me a message.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a name="contact" id="contactScroll"></a>
+<div class="containe-fluid">
+<div class="blackOpicty">
+<div class="container">
+<div class="contactFormSection2">
+<div class="iconSection">
+<img src="img/svgicons/002-business-orange.svg" alt="contact icon">
+<h2 class="iconTitle">Contact Me</h2>
+</div>
+
+
+<form id="my_form" onsubmit="submitForm(); return false;" style="color:black;">
+<div class="col-xs-12 col-sm-6">
+<input id="name" type="text" placeholder="Name" required>
+<input id="email" type="email" placeholder="Email" required>
+</div>
+<div class="col-xs-12 col-sm-6" id="textareastyles">
+<textarea id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
+</div>
+<input id="subbtn" class="button" type="submit" value="Submit">
+<span id="status"></span>
+</form>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+<footer>
+    <div class="containe-fluid blueSec sectionSpacing">
+        <div class="container ">
+            <div class="row text-center">
+                <p>©
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                    letsreedesign.com - Designed & Develqoped by Brandon Reed
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="cd-overlay"></div>
+</main>
+
+
+
+-->
+
+<!-- Slide out portfolio peice sections---------------------------------------->
+
+
+
+
+<div class="cd-member-bio member-1">
+    <div class="preview">
+        <img src="img/inspiraCapture.jpg" alt="Inspira website screen capture">
+    </div>
+    <div class="cd-bio-content">
+        <h1>Inspira</h1>
+        <!--<p style="text-align:center;">*CAUTION THIS IS A LIVE AND ACTIVE SITE*</p>-->
+        <a href="http://www.inspirafs.com" target="_blank" class="button text-center">
+            Launch Site
+        </a>
+        <br>
+        <h2>Talent Showcased:</h2>
+        <p> UI/UX Design <Br>Responsive Design <br> Structured Data / SEO <br> Sprites</p>
+        <h2>Description:</h2>
+        <p>On this project, I was the lead for all design aspects of the website. Everything from designing the website on all screen sizes, creating supporting icons, choosing imagery, and selecting the colors. I added sprites to the website to cut down on http requests to help keep this website lean and fast. We also added structure data to help with the Google ranking and SEO.
+        </p>
+    </div>
+</div>
+
+<div class="cd-member-bio member-2">
+    <div class="preview">
+        <img src="img/tpfCapture.jpg" alt="Tapolci Foundation website screen capture">
+    </div>
+    <div class="cd-bio-content">
+        <h1>Tapolci Foundation /</h1>
+        <h1>Tapolci Blog</h1>
+        <!--<p style="text-align:center;">*CAUTION THIS IS A LIVE AND ACTIVE SITE*</p>-->
+        <a href="http://www.tapolcifoundation.org/" target="_blank" class="button text-center">
+        Launch Site
+        </a>
+        <h2>Talent Showcased:</h2>
+        <p>Wordpress (Blog) <br>Responsive Design<br> Photography </p>
+        <h2>Description:</h2>
+        <p>For the Tapolci Foundation website, I worked with a team and was responsible for all the front-end related tasks. I made sure the website was fully responsive and took care of other things like typography, creating custom graphics, and taking the photographs that were shown on the website.
+</p>
+    </div>
+</div>
+
+
+<div class="cd-member-bio member-4">
+    <div class="preview">
+        <img src="img/battersboxScreenGrab.JPG" alt="The Batters Box website screen capture">
+    </div>
+    <div class="cd-bio-content">
+        <h1>The Batters Box</h1><br>
+        <a href="http://thebattersbox.letsreedesign.com/" target="_blank" class="button text-center">
+            Launch Site
+        </a>
+        <br>
+        <h2>Talent Showcased:</h2>
+        <p>
+        SASS<br />
+        WordPress<br />
+        Logo Development<br />
+        Responsive Design</p>
+        <h2>Description:</h2>
+        <p> The Batters Box is a fictitious restaurant that I came up with. I first developed the website statically then converted it over to a WordPress platform. This website is my playground for WordPress development, whenever I learn something new about WordPress this will be the place where I try it out. Right now this website use plugins such as ACF, contact form 7, icegram, and The Events Calendar.
+</p><p>
+Along with the website development, I also develop the logo for this website.
+        </p>
+          </div>
+</div>
+<div class="cd-member-bio member-5">
+    <div class="preview">
+        <img src="img/goingDeeperScreenGrab.jpg" alt="Going Deeper website screen capture">
+    </div>
+    <div class="cd-bio-content">
+        <h1>Going Deeper</h1><br>
+        <a href="https://goingdeeperconference.letsreedesign.com/" target="_blank" class="button text-center">
+            Launch Site
+        </a>
+        <br>
+        <h2>Talent Showcased:</h2>
+        <p>
+        HTML 5<br />
+        Webflow<br />
+        CSS/FlexBox<br />
+        WordPress<br />
+        Responsive Development</p>
+        <h2>Description:</h2>
+        <p>
+          This project needed a quick turn-a-around time of two weeks, due to the event quickly approaching. So with a short timeline, I used webflow to allow me to produce a website demo within a day. After I got the go-ahead form the demo, I worked on completing the static website. Phase two of this project was converting the static website into a WordPress website. With the use of Advanced Custom Fields, I gave my client complete control of all their content, on the website.
+          </p>
+        </div>
+</div>
+
+
+
+<div class="cd-member-bio member-6">
+    <div class="preview">
+        <img src="img/steeleCapture.jpg" alt="Steel Kustom website screen capture">
+    </div>
+    <div class="cd-bio-content">
+        <h1>Steele Kustoms</h1><br>
+        <a href="http://www.steelekustoms.com" target="_blank" class="button text-center">
+            Launch Site
+        </a>
+        <br>
+        <h2>Talent Showcased:</h2>
+        <p>WordPress<br>Content Management<br> Responsive Design</p>
+        <h2>Description:</h2>
+        <p> I created this website for a client, where their main goal was to show off their work and long history. I set them up with this WordPress site where they can manage all their photo with ease. I created a system where they would require little to no help from me once the project was complete. </p>
+    </div>
+</div>
+<a href="#0" class="cd-member-bio-close">Close</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+const nav = document.querySelector('#main');
+let topOfNav = nav.offsetTop;
+
+function fixNav() {
+  if (window.scrollY >= topOfNav) {
+    document.body.style.paddingTop = nav.offsetHeight + 'px';
+    nav.classList.add('navbar-fixed-top');
+    //nav.classList.add("slimNavBarLogo");
+  } else {
+    nav.classList.remove('navbar-fixed-top');
+    //nav.classList.remove("slimNavBarLogo");
+    document.body.style.paddingTop = 0;
+  }
+}
+window.addEventListener('scroll', fixNav);
+
+
+function logScroll(){
+  console.log(window.scrollY + ' this is the scroll position');
+};
+window.addEventListener('scroll', logScroll);
+
+
+function getAtt(x){
+  console.log(x.getAttribute("href"));
+  const target = x.getAttribute("href");
+  if(target.length){
+    var scrollTop = target.offsetTop;
+    document.querySelector('body , html').animate({scrollTop: scrollTo+'px'}, 800);
+  }
+};
+
+
+/*
+
+$('.js-anchor-link').click(function(e){
+  e.preventDefault();
+  var target = $($(this).attr('href'));
+  if(target.length){
+    var scrollTo = target.offset().top;
+    $('body, html').animate({scrollTop: scrollTo+'px'}, 800);
+  }
+});
+</script>
+</body>
+</html>
