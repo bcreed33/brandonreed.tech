@@ -133,14 +133,7 @@ p, li, a, #subbtn, input, textarea {
 .button2 {
   background-color: #e98324;
   transition: background-color 0.5s ease; }
-.skillprogram{
-  width: 80%;
-  margin: 30px auto;
-  display: block;
-  border-radius: 15px;
-  min-height: 160px;
 
-}
 .iconSection {
   float: left;
   /* max-width:400px;*/
@@ -504,12 +497,18 @@ button.navbar-toggle{
 /*end nav bar section////////////////////////////////////////////////////////*/
 /*about section Styles///////////////////////////////////////////////////////////////*/
 
+@media only screen and (min-width: 991px){}
+@media only screen and (min-width: 767px){}
+@media only screen and (min-width: 470px){}
+@media only screen and (min-width: 400px){}
+@media only screen and (min-width: 355px){}
+
 
 .aboutsection{
   background-color: #e98324;
   position: relative;
-  top: -10rem;
-  width: 90%;
+  top: 0rem;
+  width: 100%;
   margin: 0 auto;
   border-radius: 15px;
   padding-top: 15px;
@@ -520,17 +519,19 @@ button.navbar-toggle{
   font-weight: bolder;
   margin-bottom: 5px;
   padding-bottom: 0;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   width: 100%;
 }
 .aboutsection h4{  
-  width: 90%;
-  
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto;
+  margin-top: 10px;
   text-align: center;
   margin-bottom:0;
   padding-bottom: 0;
 font-size: 1.5rem;
+line-height: 24px;
 }
   .aboutsection hr{
   margin: 25px auto;
@@ -538,8 +539,38 @@ font-size: 1.5rem;
 }
 .aboutsection p{
   text-align: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+
+
+@media only screen and (min-width: 400px){
+  .aboutsection p{
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 600px){
+  .aboutsection h4{ 
+    max-width: 100%;
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  .aboutsection h3{
+    font-size: 5rem;
+  }
+  .aboutsection h4{ 
+    font-size: 2rem;
+  }
+  .aboutsection p{
+    font-size: 2rem;
+    line-height: 26px;
+    width: 90%;
+  }
 }
 
 
@@ -568,33 +599,60 @@ font-size: 1.5rem;
 
 
 
-
-
-
-
+.skillSection{
+  width: 80%;
+  margin: 30px auto;
+  display: block;
+  overflow: auto;
+}
+.skillrow{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  overflow: auto;
+}
+.skillrow h2{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.skillrow p{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 
 .talentList{
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   display: block;
   text-align: left;
   float: left;
-  padding-top: 20px;
 }
 .talentList li {
-  width: 33%;
+  width: 50%;
   float: left;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 25px;
   letter-spacing: .1;
-  list-style-position: inside;
-  list-style-type: square; }
-  @media only screen and (min-width: 670px) {
-    .talentList li {
-      width: 100%;
-      max-width: 250px;
-      float: none;
-      margin: 0 auto; } }
+  list-style-type: none;
+  text-align: center;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .resumeSection {
   display: block;
@@ -613,13 +671,7 @@ font-size: 1.5rem;
   float: left;
   margin-top: -225px;
   transition: all .3s ease-in-out; }
-  @media only screen and (min-width: 767px) {
-    .resumeTitle {
-      border-right: 2.5px #fff solid;
-      border-left: 2.5px #fff solid;
-      top: 0;
-      margin-top: 0px;
-      height: 125px; } }
+
 
 .resumeBtn {
   border-right: solid #fff 2.5px;
@@ -630,13 +682,7 @@ font-size: 1.5rem;
   float: right;
   margin-top: 225px;
   transition: all .3s ease-in-out; }
-  @media only screen and (min-width: 767px) {
-    .resumeBtn {
-      border-right: 2.5px #fff solid;
-      border-left: 2.5px #fff solid;
-      top: 0;
-      margin-top: 0px;
-      height: 125px; } }
+
 
 .resumeReset {
   margin-top: 0px; }
