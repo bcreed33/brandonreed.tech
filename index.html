@@ -249,10 +249,9 @@
                 <p>Here are a few of my most recent projects:</p>
                 <!--<form id="my_form" onsubmit="submitForm(); return false;" style="color:black;">-->
                 <form id="my_form" data-netlify="true" style="color:black;">
-
-                    <input id="name" type="text" placeholder="Name" required>
-                    <input id="email" type="email" placeholder="Email" required>
-                    <textarea id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
+                    <input name="name" id="name" type="text" placeholder="Name" required>
+                    <input name="email" id="email" type="email" placeholder="Email" required>
+                    <textarea name="message" id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
                     <input id="subbtn" class="button" type="submit" value="Submit">
                     <span id="status"></span>
                 </form>
