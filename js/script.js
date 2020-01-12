@@ -60,7 +60,7 @@ var stickyNav = navBar.offset().top;
 
 
 
-
+/*
 ///Nav active states////////////////////////////////////////////////////////////
 //$(document).ready(function(){
     $(window).scroll(function(){
@@ -114,69 +114,8 @@ var stickyNav = navBar.offset().top;
 //});
 
 
-//animation for the "other" portfolios section//////////////////////////////////
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var topscroll =1450;
-        if($(window).scrollTop() >= topscroll){
-            $('.graphicDesignSection').addClass("startingPoint");
-            $('.photographySection').addClass("startingPoint");
-        }
-        else{
-            $('.graphicDesignSection').removeClass("startingPoint");
-            $('.photographySection').removeClass("startingPoint");
-        }
-    });
-});
+*/
 
-
-
-
-
-//Parallax effect in the hero///////////////////////////////////////////////////
-//$(document).ready(function(){
-    $(window).scroll(function(){
-        var wScroll = $(this).scrollTop();
-        if(wScroll > $('.containerHeroGraphic').offset().top - ($(window).height()/1)){
-            //console.log('Hero parts are moving now');
-            $('.fristName').css({
-                'transform': 'translate('+ wScroll/2 +'%, 0px)'
-            });
-            $('.lastName').css({
-                'transform': 'translate(-'+ wScroll/2 +'%, 0px)'
-            });
-            $('.myTitle').css({
-                'transform': 'translate(-'+ wScroll/4 +'%, 0px)'
-            });
-            $('.areasOfSkill').css({
-                'transform': 'translate(-'+ wScroll/6 +'%, 0px)'
-            });
-            $('.standAlonelogo').css({
-                'transform': 'translate(-'+ wScroll/5+'% , -'+ wScroll/5+'%)'
-            });
-        };
-
-
-
-
-
-        //porfolio animation///////////////////////////////////////////////////
-        if(wScroll > $('.portfolioSection').offset().top - ($(window).height()/1.75)){
-            //console.log('show portfolio section icons now');
-            $('.portfolioSection img').each(function(){
-                $('.portfolioSection img').addClass('showPortImg');
-            });
-        }
-        //resume animation/////////////////////////////////////////////////////
-        if(wScroll > $('.resumeSection').offset().top - ($(window).height()/2)){
-            //console.log('what up! its working now');
-            $('.resumeSection').each(function(){
-                $('.resumeTitle').addClass('resumeReset');
-                $('.resumeBtn').addClass('resumeReset');
-            });
-        }
-    });
-//});
 
 
 
@@ -188,8 +127,25 @@ $('.cd-team').find('button').on('click', function(){
     $('main').addClass('slide-out');
     $('.cd-member-bio.'+ selected_member +'').addClass('slide-in');
     $('.cd-member-bio-close').addClass('is-visible');
-$('body').addClass('overflow-hidden');
+    $('body').addClass('overflow-hidden');
 });
+
+
+
+document.getElementsByClassName(cd-team).find('button').addEventListener("click",function(){
+    console.log(document.getSelection(this).attr('data-type'));
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
     $('.cd-team').find('ul a').on('click', function(){
@@ -208,3 +164,5 @@ $('body').addClass('overflow-hidden');
         $('body').removeClass('overflow-hidden');
     });
 //});
+
+

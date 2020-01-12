@@ -25,7 +25,7 @@
         "url":"http://letsreedesign.com/",
         "image":"http://letsreedesign.com/img/letterB.png",
         "headline":"Welcome to Brandon Reed's portfolio website!",
-        "sameAs":["https://www.facebook.com/letseedesign.photo",
+        "sameAs":[
         "https://www.instagram.com/reedesign.photo/",
         "https://letsreedesign.smugmug.com/",
         "https://www.linkedin.com/in/brandonreedesign"],
@@ -36,8 +36,9 @@
 <link href="css/sideBox.css" rel="stylesheet">
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style1.css" rel="stylesheet">
-<link href="css/mediaQueriess.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+
 </head>
 
 
@@ -178,11 +179,11 @@
                     <div class="cd-container">
                         <ul>
                           <li>
-                              <a href="#0" data-type="member-1">
+                              <a data-type="member-1">
                                   <div class="portPeicePreview" id="portfoliopreview1">
                                     <div class="portPeiceTitle">
                                         <h3>Inspira</h3>
-                                        <button data-type="member-1">More Info</button>
+                                        <button data-type="member-1" onclick="myScript(this);">More Info</button>
                                     </div>
                                   </div>
                               </a>
@@ -192,27 +193,27 @@
                                     <div class="portPeicePreview" id="portfoliopreview2">
                                         <div class="portPeiceTitle">
                                             <h3>Going Deeper</h3>
-                                            <button data-type="member-5">More Info</button>
+                                            <button data-type="member-5" onclick="myScript(this);">More Info</button>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#0" data-type="member-2">
+                                <a data-type="member-2">
                                     <div class="portPeicePreview" id="portfoliopreview3">
                                         <div class="portPeiceTitle">
                                             <h3>Tapolci Foundation</h3>
-                                            <button data-type="member-2">More Info</button>
+                                            <button data-type="member-2" onclick="myScript(this);">More Info</button>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#0" data-type="member-4">
+                                <a data-type="member-4">
                                     <div class="portPeicePreview" id="portfoliopreview4">
                                         <div class="portPeiceTitle">
                                             <h3>The Batters Box</h3>
-                                            <button data-type="member-4">More Info</button>
+                                            <button data-type="member-4" onclick="myScript(this);">More Info</button>
                                         </div>
                                     </div>
                                 </a>
@@ -283,7 +284,6 @@
 
 
 
-
 <div class="cd-member-bio member-1">
     <div class="preview">
         <img src="img/inspiraCapture.jpg" alt="Inspira website screen capture">
@@ -346,6 +346,8 @@ Along with the website development, I also develop the logo for this website.
         </p>
           </div>
 </div>
+
+
 <div class="cd-member-bio member-5">
     <div class="preview">
         <img src="img/goingDeeperScreenGrab.jpg" alt="Going Deeper website screen capture">
@@ -388,71 +390,15 @@ Along with the website development, I also develop the logo for this website.
         <p> I created this website for a client, where their main goal was to show off their work and long history. I set them up with this WordPress site where they can manage all their photo with ease. I created a system where they would require little to no help from me once the project was complete. </p>
     </div>
 </div>
-<a href="#0" class="cd-member-bio-close">Close</a>
+
+
+<a class="cd-member-bio-close">×</a>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-const nav = document.querySelector('#main');
-let topOfNav = nav.offsetTop;
-
-function fixNav() {
-  if (window.scrollY >= topOfNav) {
-    document.body.style.paddingTop = nav.offsetHeight + 'px';
-    nav.classList.add('navbar-fixed-top');
-    //nav.classList.add("slimNavBarLogo");
-  } else {
-    nav.classList.remove('navbar-fixed-top');
-    //nav.classList.remove("slimNavBarLogo");
-    document.body.style.paddingTop = 0;
-  }
-}
-window.addEventListener('scroll', fixNav);
-
-
-function logScroll(){
-  console.log(window.scrollY + ' this is the scroll position');
-};
-window.addEventListener('scroll', logScroll);
-
-
-function getAtt(x){
-  console.log(x.getAttribute("href"));
-  const target = x.getAttribute("href");
-  if(target.length){
-    var scrollTop = target.offsetTop;
-    document.querySelector('body , html').animate({scrollTop: scrollTo+'px'}, 800);
-  }
-};
-
-
-/*
-
-$('.js-anchor-link').click(function(e){
-  e.preventDefault();
-  var target = $($(this).attr('href'));
-  if(target.length){
-    var scrollTo = target.offset().top;
-    $('body, html').animate({scrollTop: scrollTo+'px'}, 800);
-  }
-});
-</script>
+<script src="js/script1.js"></script>
 </body>
 </html>
