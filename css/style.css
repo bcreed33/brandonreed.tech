@@ -165,15 +165,14 @@ p, li, a, #subbtn, input, textarea {
 
 
 .heroBackgroundImage {
-  height: 75vh;
+  height: calc(90vh - 80px);
   background: url("../img/newHero1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
   padding: 0%;
-  
-
+  min-height: 525px;
  }
 #heroGraphicTitel {
   display: block;
@@ -316,7 +315,12 @@ hr {
     opacity: 1;
   }
 }
+@media only screen and (min-width: 900px){
+  .heroBackgroundImage {
+    height: calc(100vh - 80px);
+  }
 
+}
 @media only screen and (min-width: 1200px){
   .containerHeroGraphic {
     max-width: 675px;
@@ -388,101 +392,97 @@ hr {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.navBarLogo {
+.navbar{
+  top: 0;
   width: 100%;
-  display: block;
-  margin: 0 auto;
-  padding-top: 10px; }
-  .navBarLogo img {
-    display: block;
-    width: 50%;
-    max-width: 25px;
-    margin: 0 auto; }
-
-
-.slimNavBarLogo {
-  height: 65px !important;
-  display: block;
-  margin: 0 auto;
-  padding-top: 3px; }
-
-
-.navbar {
-  height: 75px;
-  background-color: #fff;
-  transition: all .3s ease-in-out;
-  border-bottom: #e98324 solid 5px; }
-button.navbar-toggle{
-  margin: 0;
-  padding: 10px;
-  display: block;
-  top: -40px;
-  left: 25px;
-  float: none;
-  min-height: 45px;
-  min-width: 50px;
+  background: white;
+  z-index: 9999;
 }
-.icon-bar{
+.navbar-brand{
+  display: block;
   width: 80%;
-  margin: 0 auto;
+  float: left;
+  height: 65px;
+  padding: 10px;
 }
-.activeNavLink {
-  background-color: #e98324 !important;
-  transition: all 0.1s ease-in-out;
-  color: #fff !important; }
-
-.navbar-default .navbar-nav > li > a:hover {
-  background-color: #3a74a6;
-  color: #fff;
-  transition: all 0.3s ease-in-out; }
-
-.navbar-nav > li > a {
+.navbar-brand img{
+  width: 25px;
   display: block;
-  height: auto;
-  width: 125px;
-  min-height: 45px;
-  min-width: 45px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 50px;
-  transition: all 0.3s ease-in-out; }
+  margin-left: 25px;
+}
+.navbar-toggler{
+  width: 45px;
+  height: 45px;
+  margin: 10px;
 
-  @media only screen and (min-width: 767px){
-    button.navbar-toggle{
-      display: none;
-    }
-    .navBarLogo img{
-      max-width: 55px;
-    }
+}
+#navbarNav{
+  width: 100%;
+  clear: both;
+}
+
+.nav-item{
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.nav-item a{
+  display: block;
+}
+
+
+@media only screen and (min-width: 767px){
+  .navbar{
   }
+  .navbar-toggler{
+  display: none;
+  height: 0;
+  width: 0;
+  }
+  .navbar-brand {
+    width:15%;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar-brand img{
+    width: 35px;
+    display: block;
+    margin-left: 0px;
+  }
+  #navbarNav{
+    width: 85%;
+    clear: none;
+    float: right;
+
+  }
+  .navbar-nav{
+    width:100%;
+    float: right;
+    position: absolute;
+  }
+  .nav-item{
+    width: 20%;
+    background-color: pink;
+    height: 80px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -23,3 +23,9 @@ document.querySelector('.cd-member-bio-close').addEventListener('click', functio
     document.querySelector('.cd-member-bio.slide-in').classList.remove("slide-in");
     document.querySelector('.cd-member-bio-close').classList.remove("is-visible");
 });
+
+
+
+document.querySelector('.navbar-toggle').addEventListener('click', function () {
+    document.querySelector('.navbar').classList.toggle('showNav');
+});
