@@ -1,5 +1,5 @@
+//Js for the menu button
 const navTrigger = document.querySelector('.nav-trigger');
-
 navTrigger.addEventListener('click', function(e) {
   e.preventDefault();
   this.classList.toggle('is-active');
@@ -7,9 +7,7 @@ navTrigger.addEventListener('click', function(e) {
 
 
 
-
-
-
+//////js for my portfolio slideout boxes
 //This is going to open my portfolio peices based off the data attribute I sent for each peice. 
 function myScript(x){
     const selected_portfolio= x.getAttribute('data-type');
@@ -19,7 +17,6 @@ function myScript(x){
     document.querySelector('.cd-member-bio-close').className += " is-visible";
     document.querySelector('main').className += " overflow-hidden";
 }
-
 //This is going to close the portfolio peices 
 document.querySelector('.cd-overlay, .cd-member-bio-close is-visible').addEventListener('click', function () {
     document.querySelector('main' ).classList.remove("slide-out");
@@ -34,13 +31,7 @@ document.querySelector('.cd-member-bio-close').addEventListener('click', functio
 });
 
 
-/*
-document.querySelector('.navbar-toggle').addEventListener('click', function () {
-    document.querySelector('.navbar').classList.toggle('showNav');
-});
-*/
-
-
+////All my portfolio peices info. Hope soon to transfer this info into a headless cms platform
 const portP =[{
     portfolio_id : "1",
     portfolio_title : "Inspira",
@@ -88,7 +79,8 @@ const portP =[{
     }
 ];
 
-//console.log(portP[3].portfolio_talent[1]);
+
+//////js that is displaying my portfolio cards
 const porfolioCards = portP.map(x =>
 `<li>
     <a data-type="member-${x.portfolio_id}">
@@ -101,17 +93,17 @@ const porfolioCards = portP.map(x =>
     </a>
 </li>`);
 
+document.querySelector('#portPPP').innerHTML= porfolioCards;
 
-//const porfolioTalents = portP.map( x => x.portfolio_talent );
 
-//console.log(porfolioTalents);
 
+//////js that is filling out the info for the portfolio slide-out boxes
 const porfolioBios = portP.map( function (x){
 const talentList = x.portfolio_talent
 const talentListMapped = talentList.map(x => 
     `${x.portfolio_talent1} <br>
      ${x.portfolio_talent2} <br>
-      ${x.portfolio_talent3} <br>
+     ${x.portfolio_talent3} <br>
     `);
 
 return `<div class="cd-member-bio member-${x.portfolio_id}">
@@ -124,25 +116,39 @@ return `<div class="cd-member-bio member-${x.portfolio_id}">
             Launch Site
         </a>
         <br>
-        <h2>Talent Showcased:</h2>
+        <h2>
+            Talent Showcased:
+        </h2>
         <p>
-        ${talentListMapped}
+            ${talentListMapped}
         </p>
-        <h2>Description:</h2>
+        <h2>
+            Description:
+        </h2>
         <p>
             ${x.portfolio_copy}
         </p>
     </div>
 </div>` });
 
-
-document.querySelector('#portPPP').innerHTML= porfolioCards;
 document.querySelector('#portfolioBios').innerHTML= porfolioBios;
 
 
 
 
+//////js for the stick nav on scroll
+//Intersection Observer
+let nav = document.querySelector('.navbar');
+let hero = document.querySelector('.heroBackgroundImage');
+const navHandler = (entries) => {
+    console.log(entries)
+    if (!entries[0].isIntersecting) {
+        nav.classList.add('navbar-sticky')
+    } else {
+        nav.classList.remove('navbar-sticky')
+    }
+}
+const observer = new window.IntersectionObserver(navHandler)
+// this is watching the hero banner
+observer.observe(hero)
 
-//        ${
-            //var porfolioTalents = portP.map( x => `${x.portfolio_talent} <br/> `);
-       // }
