@@ -188,7 +188,35 @@
 </div>
 
 
+<script type="text/javascript">
 
+    function encode(data){
+        const formData= new FormData()
+    
+        for (const key of Object.keys(data)){
+            formData.append(key, data[key])
+        }
+        return formData
+    }
+    
+    function App(){
+    const handleSubmit =  e => {
+        e.preventDefault()
+        const form = e.target
+    fetch('/',{
+        method: 'POST',
+        body: encode({
+            'form-name': form.getAttribute('name'),
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value,
+        }),
+    })
+    .then(() => document.querySelector('#successmessage').innerHTML="Holy cow it worked!" )
+    .catch((error) => alert(error))
+    }
+    };
+    </script>
 <a name="contact" id="contactScroll"></a>
 <div class="containe-fluid">
         <div class="container">
@@ -198,7 +226,7 @@
                 <hr>
                 <div id="successmessage"></div>
                 <!--<form id="my_form" onsubmit="submitForm(); return false;" style="color:black;">-->
-                <form onSubmit={handleSubmit} id="my_form" name="Contact" action="POST" data-netlify="true" style="color:black;">
+                <form onSubmit={handleSubmit} id="my_form" name="Contact" action="POST" netlify style="color:black;">
                     <input name="name" id="name" type="text" placeholder="Name" required>
                     <input name="email" id="email" type="email" placeholder="Email" required>
                     <textarea name="message" id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
@@ -209,30 +237,7 @@
             </div>
         </div>
 </div>
-<script type="text/javascript">
-function App(){
 
-const handleSubmit =  e => {
-    e.preventDefault()
-    const form = e.target
-
-
-
-fetch('/',{
-    method: 'POST',
-    body: encode({
-        'form-name': form.getAttribute('name'),
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value,
-    }),
-})
-.then(() => document.querySelector('#successmessage').innerHTML="Holy cow it worked!" )
-.catch((error) => alert(error))
-}
-
-};
-</script>
 
 
 <footer>
