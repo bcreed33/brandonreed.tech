@@ -226,7 +226,7 @@
                 <hr>
                 <div id="successmessage"></div>
                 <!--<form id="my_form" onsubmit="submitForm(); return false;" style="color:black;">-->
-                <form onSubmit={handleSubmit} id="my_form" name="Contact" action="POST" netlify style="color:black;">
+                <form onSubmit="handleSubmit();" id="my_form" name="Contact" action="POST" style="color:black;">
                     <input name="name" id="name" type="text" placeholder="Name" required>
                     <input name="email" id="email" type="email" placeholder="Email" required>
                     <textarea name="message" id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
