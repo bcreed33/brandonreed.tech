@@ -207,9 +207,9 @@
         method: 'POST',
         body: encode({
             'form-name': form.getAttribute('name'),
-            name: form.name.value,
-            email: form.email.value,
-            message: form.message.value,
+            Name: form.name.value,
+            Email: form.email.value,
+            Message: form.message.value,
         }),
     })
         .then(() => document.querySelector('#successmessage').innerHTML="Holy cow it worked!" )
@@ -226,7 +226,7 @@
                 <hr>
                 <div id="successmessage"></div>
                 <!--<form id="my_form" onsubmit="submitForm(); return false;" style="color:black;">-->
-                <form id="my_form" name="Contact" style="color:black;">
+                <form id="my_form" name="contact" style="color:black;">
                     <input name="name" id="name" type="text" placeholder="Name" required>
                     <input name="email" id="email" type="email" placeholder="Email" required>
                     <textarea name="message" id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
