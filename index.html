@@ -196,8 +196,9 @@
                 <img src="img/svgicons/001-technology-1-orange.svg" alt="portfolio icon">
                 <h2>Contact Me</h2>
                 <hr>
+                <div id="successmessage"></div>
                 <!--<form id="my_form" onsubmit="submitForm(); return false;" style="color:black;">-->
-                <form id="my_form" action="POST" data-netlify="true" style="color:black;">
+                <form onSubmit={handleSubmit} id="my_form" name="Contact" action="POST" data-netlify="true" style="color:black;">
                     <input name="name" id="name" type="text" placeholder="Name" required>
                     <input name="email" id="email" type="email" placeholder="Email" required>
                     <textarea name="message" id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
@@ -208,7 +209,30 @@
             </div>
         </div>
 </div>
+<script type="text/javascript">
+function App(){
 
+const handleSubmit =  e => {
+    e.preventDefault()
+    const form = e.target
+
+
+
+fetch('/',{
+    method: 'POST',
+    body: encode({
+        'form-name': form.getAttribute('name'),
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+    }),
+})
+.then(() => document.querySelector('#successmessage').innerHTML="Holy cow it worked!" )
+.catch((error) => alert(error))
+}
+
+};
+</script>
 
 
 <footer>
