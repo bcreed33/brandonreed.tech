@@ -988,29 +988,18 @@ box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
                 padding: 5px;
                 font-size: 1em; } }
   
-                
-
-
-          span#status {
-            display: block;
-            width: 80%;
-            text-align: center;
-            margin: 0 auto;
-            font-size: 18px;
-            color: #fff;
-            padding: 10px 0 0 0; }
-          
-          #thankYouMessage {
+                         
+          #successmessage {
             display: block;
             width: 100%;
             height: auto;
             margin: 0 auto;
-            color: #fff;
-            font-size: 2em;
+            color: #000;
+            font-size: 20px;
             max-width: 300px;
             text-align: center;
-            padding: 50px 0;
-            line-height: 40px; }
+            padding: 25px 0;
+            line-height: 20px; }
 
 
 

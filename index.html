@@ -196,25 +196,24 @@
                 <img src="img/svgicons/001-technology-1-orange.svg" alt="portfolio icon">
                 <h2>Contact Me</h2>
                 <hr>
-                <div id="successmessage"></div>
                 <!--<form id="my_form" onsubmit="submitForm(); return false;" style="color:black;">-->
-                <form id="my_form" name="Contact" data-netlify="true" style="color:black;" action="/#successmessage">
+                <form id="my_form" name="Contact" data-netlify="true" style="color:black;" action="/#netFormSub">
                     <input name="name" id="name" type="text" placeholder="Name" required>
                     <input name="email" id="email" type="email" placeholder="Email" required>
                     <textarea name="message" id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
-                    <!--<div data-netlify-recaptcha="true"></div>-->
+                    <div data-netlify-recaptcha="true"></div>
                     <input id="subbtn" class="button" type="submit" value="Submit">
-                    <span id="status"></span>
+                    <div id="successmessage">Thank you for your message!</span>
                 </form>
             </div>
         </div>
 </div>
 
 <script type="text/javascript">
-const urlHask = location.hash;
-console.log(urlHask);
-if( urlHask === "#successmessage"){
-    document.querySelector('#successmessage').innerHTML="Thank you for the form submission";
+const urlHash = location.hash;
+console.log(urlHash);
+if( urlHash === "#netFormSub"){
+    document.querySelector('#successmessage').innerHTML="Thank you for your message!";
 }
 
 </script>
