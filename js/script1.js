@@ -1,3 +1,12 @@
+const navTrigger = document.querySelector('.nav-trigger');
+
+navTrigger.addEventListener('click', function(e) {
+  e.preventDefault();
+  this.classList.toggle('is-active');
+}, false);
+
+
+
 
 
 
@@ -38,32 +47,48 @@ const portP =[{
     portfolio_imageUrl : "img/inspiraCapture.jpg",
     portfolio_link : "http://www.inspirafs.com",
     portfolio_copy : "On this project, I was the lead for all design aspects of the website. Everything from designing the website on all screen sizes, creating supporting icons, choosing imagery, and selecting the colors. I added sprites to the website to cut down on http requests to help keep this website lean and fast. We also added structure data to help with the Google ranking and SEO.",
-    portfolio_talent : "asdfahlsdfkjashdf"
+    portfolio_talent : [{
+        portfolio_talent1 : "talent1",
+        portfolio_talent2 : "talent2",
+        portfolio_talent3 : "talent3"
+                        }]
 },{
     portfolio_id : "2",
     portfolio_title : "Tapolci Foundation",
     portfolio_imageUrl : "img/tpfCapture.jpg",
     portfolio_link : "http://www.tapolcifoundation.org/",
     portfolio_copy : "For the Tapolci Foundation website, I worked with a team and was responsible for all the front-end related tasks. I made sure the website was fully responsive and took care of other things like typography, creating custom graphics, and taking the photographs that were shown on the website.",
-    portfolio_talent : "asdfahlsdfkjashdf"
+    portfolio_talent : [{
+        portfolio_talent1 : "talent4",
+        portfolio_talent2 : "talent5",
+        portfolio_talent3 : "talent6"
+                        }]
 },{
     portfolio_id : "3",
     portfolio_title : "The Batters Box",
     portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
     portfolio_link : "http://thebattersbox.letsreedesign.com/",
     portfolio_copy : "The Batters Box is a fictitious restaurant that I came up with. I first developed the website statically then converted it over to a WordPress platform. This website is my playground for WordPress development, whenever I learn something new about WordPress this will be the place where I try it out. Right now this website use plugins such as ACF, contact form 7, icegram, and The Events Calendar.",
-    portfolio_talent : "asdfahlsdfkjashdf"
+    portfolio_talent : [{
+        portfolio_talent1 : "talent7",
+        portfolio_talent2 : "talent9",
+        portfolio_talent3 : "talent8"
+                        }]
 },{
     portfolio_id : "4",
     portfolio_title : "Going Deeper",
     portfolio_imageUrl : "img/goingDeeperScreenGrab.jpg",
     portfolio_link : "https://goingdeeperconference.letsreedesign.com/",
     portfolio_copy : "This project needed a quick turn-a-around time of two weeks, due to the event quickly approaching. So with a short timeline, I used webflow to allow me to produce a website demo within a day. After I got the go-ahead form the demo, I worked on completing the static website. Phase two of this project was converting the static website into a WordPress website. With the use of Advanced Custom Fields, I gave my client complete control of all their content, on the website.",
-    portfolio_talent : "asdfahlsdfkjashdf"
+    portfolio_talent : [{
+        portfolio_talent1 : "talent10",
+        portfolio_talent2 : "talent12",
+        portfolio_talent3 : "talent13"
+                        }]
     }
-]
-;
+];
 
+//console.log(portP[3].portfolio_talent[1]);
 const porfolioCards = portP.map(x =>
 `<li>
     <a data-type="member-${x.portfolio_id}">
@@ -74,10 +99,22 @@ const porfolioCards = portP.map(x =>
             </div>
         </div>
     </a>
-</li>```);
+</li>`);
 
-const porfolioBios = portP.map( x =>
-`<div class="cd-member-bio member-${x.portfolio_id}">
+
+//const porfolioTalents = portP.map( x => x.portfolio_talent );
+
+//console.log(porfolioTalents);
+
+const porfolioBios = portP.map( function (x){
+const talentList = x.portfolio_talent
+const talentListMapped = talentList.map(x => 
+    `${x.portfolio_talent1} <br>
+     ${x.portfolio_talent2} <br>
+      ${x.portfolio_talent3} <br>
+    `);
+
+return `<div class="cd-member-bio member-${x.portfolio_id}">
     <div class="preview">
         <img src="${x.portfolio_imageUrl}" alt="Inspira website screen capture">
     </div>
@@ -87,14 +124,25 @@ const porfolioBios = portP.map( x =>
             Launch Site
         </a>
         <br>
+        <h2>Talent Showcased:</h2>
+        <p>
+        ${talentListMapped}
+        </p>
         <h2>Description:</h2>
         <p>
             ${x.portfolio_copy}
         </p>
     </div>
-</div>` );
+</div>` });
 
 
 document.querySelector('#portPPP').innerHTML= porfolioCards;
 document.querySelector('#portfolioBios').innerHTML= porfolioBios;
 
+
+
+
+
+//        ${
+            //var porfolioTalents = portP.map( x => `${x.portfolio_talent} <br/> `);
+       // }

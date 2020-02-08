@@ -38,7 +38,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 
-
+<link href="css/menu.css" rel="stylesheet">
 
 </head>
 
@@ -67,11 +67,8 @@
     <a href="#homeScroll" class="navbar-brand">
         <img alt="Brand Reed name logo" src="img/svgicons/logo.svg" >
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    <button class="navbar-toggler nav-trigger" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
@@ -394,7 +391,6 @@ Along with the website development, I also develop the logo for this website.
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/script1.js"></script>
 <script type="text/javascript">
-
     //script for the nav link scrolling
     $('a[href*=#]').on('click', function(event){
       event.preventDefault();
@@ -403,7 +399,6 @@ Along with the website development, I also develop the logo for this website.
     //Loading the smoothScroll.js only when the user
     if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
     document.write('<script src="js/smoothScroll.js"><\/script>');
-
 </script>
 
 </body>
