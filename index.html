@@ -212,8 +212,8 @@
             message: form.message.value,
         }),
     })
-    .then(() => document.querySelector('#successmessage').innerHTML="Holy cow it worked!" )
-    .catch((error) => alert(error))
+        .then(() => document.querySelector('#successmessage').innerHTML="Holy cow it worked!" )
+        .catch((error) => alert(error))
     }
     };
     </script>
@@ -226,12 +226,12 @@
                 <hr>
                 <div id="successmessage"></div>
                 <!--<form id="my_form" onsubmit="submitForm(); return false;" style="color:black;">-->
-                <form onSubmit="handleSubmit();" id="my_form" name="Contact" action="POST" style="color:black;">
+                <form id="my_form" name="Contact" style="color:black;">
                     <input name="name" id="name" type="text" placeholder="Name" required>
                     <input name="email" id="email" type="email" placeholder="Email" required>
                     <textarea name="message" id="mes" type="text"  placeholder="Your Message" style="width:100%; !important" required></textarea>
                     <div data-netlify-recaptcha="true"></div>
-                    <input id="subbtn" class="button" type="submit" value="Submit">
+                    <input onSubmit="handleSubmit();" id="subbtn" class="button" type="submit" value="Submit">
                     <span id="status"></span>
                 </form>
             </div>
