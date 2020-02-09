@@ -84,7 +84,7 @@ const portP =[{
 const porfolioCards = portP.map(x =>
 `<li>
     <a data-type="member-${x.portfolio_id}">
-        <div class="portPeicePreview" id="portfoliopreview${x.portfolio_id}" style="background-image: url(../${x.portfolio_imageUrl});">
+        <div class="portPeicePreview" style="background-image: url(../${x.portfolio_imageUrl});">
             <div class="portPeiceTitle">
                 <h3>${x.portfolio_title}</h3>
                 <button data-type="member-${x.portfolio_id}" onclick="myScript(this);">More Info</button>
