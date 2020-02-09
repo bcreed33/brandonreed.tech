@@ -15,22 +15,26 @@ MEDIA QUERIES
 @media only screen and (min-width: 400px){}
 @media only screen and (min-width: 355px){}
 
-
 */
+
+
+/*Global styles///////////////////////////////////////////////////////////////*/
 @import url("https://fonts.googleapis.com/css?family=Glegoo:700");
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,500");
 h1, h2, h3, h4, h5 {
-  font-family: "Glegoo", serif !important; }
+  font-family: "Glegoo", serif !important; 
+}
 
 p, li, a, #subbtn, input, textarea {
-  font-family: "Maven Pro", sans-serif !important; }
+  font-family: "Maven Pro", sans-serif !important;
+}
 
-/*Global styles///////////////////////////////////////////////////////////////*/
 .heroblackOpicty {
   width: 100%;
   height: 100%;
   display: block; 
-  background-color: rgba(0, 0, 0, 0.5);}
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 footer{
   background-color: #202020;
@@ -39,76 +43,15 @@ footer{
   font-size: 18px;
 }
 
-.blackOpicty {
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.5); }
-
 .sectionSpacing {
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px; 
+}
 
 .orangeSec {
   background-color: #e98324;
-  color: #fff; }
-
-
-.photoSection1 {
-  height: 100%;
-  max-height: 225px;
-  background: url("../img/newHero2.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden; }
-
-.photoSection2 {
-  height: 100%;
-  max-height: 225px;
-  background: url("../img/newHero4.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden; }
-
-.photoSection3 {
-  height: 100%;
-  max-height: 560px;
-  background: url('../img/newHero3.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden; }
-
-.otherPortfolio {
   color: #fff;
-  height: 150px;
-  margin-bottom: 80px; }
-
-.graphicDesignSection {
-  border-right: solid #fff 2.5px;
-  /*margin-left:5000px;*/
-  position: relative;
-  width: 50%;
-  top: 35px;
-  left: -1000px;
-  transition: all .3s ease-in-out; }
-
-.photographySection {
-  border-left: solid #fff 2.5px;
-  position: relative;
-  width: 50%;
-  top: 35px;
-  left: 1000px;
-  transition: all .3s ease-in-out;
-  /*margin-left:5000px;*/ }
-
-.startingPoint {
-  left: 0; }
+}
 
 .button {
   font-size: 18px;
@@ -124,49 +67,29 @@ footer{
   line-height: 25px;
   padding: 12px 0;
   transition: background-color 0.5s ease;
-  border: 0px; }
-  .button:hover {
-    -webkit-box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
-    box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
-    color: #fff;
-    background-color: #264b6c;
-    text-decoration: none; }
-  .button:visited {
-    color: #fff; }
+  border: 0px;
+}
 
-.button2 {
-  background-color: #e98324;
-  transition: background-color 0.5s ease; }
-
-.iconSection {
-  float: left;
-  /* max-width:400px;*/
-  width: 25%;
-  /*margin: 0 auto;*/
-  height: 125px;
-  clear: both;
-  margin-bottom: 20px; }
-  .iconSection img {
-    display: block;
-    max-width: 90px;
-    width: 100%;
-    margin: 0 auto; }
-
-.iconTitle {
-  text-align: center;
-  width: 100%;
-  float: left;
-  font-size: 26px;
- }
-
-.photoSection3 .iconTitle {
-  color: #fff; }
-
+.button:hover {
+  -webkit-box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
+  box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
+  color: #fff;
+  background-color: #264b6c;
+  text-decoration: none;
+}
+.button:visited {
+  color: #fff;  
+}
 
 /*end of Global styles////////////////////////////////////////////////////////*/
 /*hero section////////////////////////////////////////////////////////////////*/
 
-
+.blackOpicty {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
 
 .heroBackgroundImage {
   height: calc(80vh - 80px);
@@ -177,7 +100,8 @@ footer{
   width: 100%;
   padding: 0%;
   min-height: 525px;
- }
+}
+
 #heroGraphicTitel {
   display: block;
   height: 500px;
@@ -188,14 +112,13 @@ footer{
   z-index: 9999px;
   font-family: 'Maven Pro', sans-serif;
   padding-top:5%;
-  }
+}
 
 .containerHeroGraphic {
   width: 100%;
   display: block;
   margin: 0 auto; 
 }
-
 
 .fristName {
   display: block;
@@ -206,7 +129,8 @@ footer{
   letter-spacing: 2px;
   text-align: center;
   color: #e98324;
-  font-weight: lighter !important; }
+  font-weight: lighter !important;
+}
 
 .lastName {
   display: block;
@@ -217,36 +141,40 @@ footer{
   letter-spacing: 8px;
   color: #3a74a6;
   font-weight: 400;
-  text-align: center; }
+  text-align: center;
+}
 
 hr {
-  margin: 0px; }
+  margin: 0px;
+}
 
 .mytitle {
   margin: 0 auto;
   width: 75%;
   max-width: 400px;
   display: block;
-  text-align: center;}
+  text-align: center;
+}
 
-  .mytitle p {
-    width:100%;
-    height: auto;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    text-align: center;
-    color: #fff; }
-  .mytitle hr{
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-  }
+.mytitle p {
+  width:100%;
+  height: auto;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+}
+
+.mytitle hr{
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
 
 .forgroundSection{
   z-index: 10;
   position: relative;
 }
-
 
 .standAlonelogo {
   width: 150px;
@@ -268,20 +196,23 @@ hr {
     padding-top: 15%;
   }
 }
+
 @media only screen and (min-width: 600px){
   .containerHeroGraphic {
     max-width: 455px;
   }
+
   #heroGraphicTitel {
     padding-top: 10%;
   }
+
   .fristName {
     height: 85px;
     font-size: 10rem;
     letter-spacing: 10px;
     text-align: left;
- }
-  
+  }
+
   .lastName {
     width: 70%;
     float: left;
@@ -290,24 +221,27 @@ hr {
     letter-spacing: 18px;
     color: #3a74a6;
     font-weight: 400;
-    text-align: left; }
+    text-align: left;
+  }
 
   .mytitle{
     width: 70%;
     float: left;
     height: 115px; 
   }
+
   .mytitle p {
     font-size: 2.5rem;
     letter-spacing: 2px;
     text-align: center;
-    color: #fff; }
+    color: #fff;
+  }
 
-    .mytitle hr{
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
-    }
+  .mytitle hr{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 
   .forgroundSection {
     float: left;
@@ -319,25 +253,28 @@ hr {
     opacity: 1;
   }
 }
+
 @media only screen and (min-width: 900px){
   .heroBackgroundImage {
     height: calc(100vh - 80px);
   }
-
 }
+
 @media only screen and (min-width: 1200px){
   .containerHeroGraphic {
     max-width: 675px;
   }
+
   #heroGraphicTitel {
     padding-top: 5%;
   }
+
   .fristName {
     height: 80px;
     font-size: 11rem;
     letter-spacing: 5px;
- }
-  
+  }
+
   .lastName {
     width: 70%;
     float: left;
@@ -346,7 +283,8 @@ hr {
     letter-spacing: 15px;
     color: #3a74a6;
     font-weight: 400;
-    text-align: left; }
+    text-align: left;
+  }
 
   .mytitle{
     max-width: 130%;
@@ -360,17 +298,19 @@ hr {
     letter-spacing: 2px;
     text-align: center;
     color: #fff; 
-    clear: both;}
+    clear: both;
+  }
 
-    .mytitle hr{
-      max-width: 90%;
-      margin: 0 auto;
-    }
+  .mytitle hr{
+    max-width: 90%;
+    margin: 0 auto;
+  }
 
   .forgroundSection {
     float: left;
     height: 300px;
   }
+
   .standAlonelogo {
     top: -250px;
     right: 0;
@@ -381,20 +321,10 @@ hr {
     height: 250px;
     background-size: auto 225px; 
   }
-
 }
-
-
-
-
-
-
-
 
 /*end hero section////////////////////////////////////////////////////////////*/
 /*nav bar section/////////////////////////////////////////////////////////////*/
-
-
 
 .navbar{
   width: 100%;
@@ -402,8 +332,8 @@ hr {
   background: white;
   z-index: 9999;
   border-radius: 0;
-  
 }
+
 .navbar-sticky{
   position: fixed;
   top: 0;
@@ -414,6 +344,7 @@ hr {
   border-bottom: 1px black solid;
   transition: border-bottom 1s;
 }
+
 .navbar-brand{
   display: block;
   width: 80%;
@@ -421,17 +352,19 @@ hr {
   height: 65px;
   padding: 10px;
 }
+
 .navbar-brand img{
   width: 25px;
   display: block;
   margin-left: 25px;
 }
+
 .navbar-toggler{
   width: 45px;
   height: 45px;
   margin: 10px;
-
 }
+
 #navbarNav{
   width: 100%;
   clear: both;
@@ -443,13 +376,14 @@ hr {
   font-size: 16px;
   line-height: 50px;
 }
+
 .nav-link.active{
   background-color: red;
 }
+
 .nav-item a{
   display: block;
 }
-
 
 @media only screen and (min-width: 767px){
   .navbar{
@@ -459,6 +393,7 @@ hr {
     height: 80px;
     transition: all .5s;
   }
+
   .navbar-sticky{
     width: 90%;
     border-radius: 0 0px 5px 5px;
@@ -466,90 +401,58 @@ hr {
     border-top:0 ;
     transition: all 1s;
   }
+
   .navbar-toggler{
-  display: none;
-  height: 0;
-  width: 0;
+    display: none;
+    height: 0;
+    width: 0;
   }
+
   .navbar-brand {
     width:20%;
     padding: 10px 0;
     margin: 0;
-
   }
+
   .navbar-brand img{
     width: 30px;
     display: block;
     margin: 0 auto;
   }
+
   #navbarNav{
     width: 80%;
     clear: none;
     float: right;
-
   }
+
   .navbar-nav{
     width:95%;
     float: right;
     position: absolute;
   }
+
   .nav-item{
     width: 20%;
     height: 80px;
   }
+
   .navbar-nav>li>a{
     height: 80px;
     line-height: 40px;
     font-size: 20px;
     transition: all ease-in-out .2s;
     text-decoration: none;
-
-    
   }
+
   .navbar-nav>li>a:hover{
     color: orange;
     border-bottom: 3px solid black;
-
-  }
-  .navbar-nav:hover{
-
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*end nav bar section////////////////////////////////////////////////////////*/
 /*about section Styles///////////////////////////////////////////////////////////////*/
-
-@media only screen and (min-width: 991px){}
-@media only screen and (min-width: 767px){}
-@media only screen and (min-width: 470px){}
-@media only screen and (min-width: 400px){}
-@media only screen and (min-width: 355px){}
-
 
 .aboutsection{
   background-color: #e98324;
@@ -569,6 +472,7 @@ hr {
   font-size: 3.5rem;
   width: 100%;
 }
+
 .aboutsection h4{  
   width: 100%;
   max-width: 300px;
@@ -577,13 +481,15 @@ hr {
   text-align: center;
   margin-bottom:0;
   padding-bottom: 0;
-font-size: 1.5rem;
-line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 24px;
 }
-  .aboutsection hr{
+
+.aboutsection hr{
   margin: 25px auto;
   width: 70%;
 }
+
 .aboutsection p{
   text-align: center;
   width: 100%;
@@ -597,7 +503,8 @@ line-height: 24px;
   font-size: 18px;
   margin: 0 auto;
   display: block;
-  float: none; }
+  float: none;
+}
 
 
 @media only screen and (min-width: 400px){
@@ -617,9 +524,11 @@ line-height: 24px;
   .aboutsection h3{
     font-size: 5rem;
   }
+
   .aboutsection h4{ 
     font-size: 2rem;
   }
+
   .aboutsection p{
     font-size: 2rem;
     line-height: 26px;
@@ -627,31 +536,8 @@ line-height: 24px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*end about section ////////////////////////////////////////////////////////*/
+/*skill section Styles///////////////////////////////////////////////////////////////*/
 
 .skillSection{
   width: 100%;
@@ -659,6 +545,7 @@ line-height: 24px;
   display: block;
   overflow: auto;
 }
+
 .skillrow{
   width: 80%;
   max-width: 450px;
@@ -672,22 +559,26 @@ line-height: 24px;
   -webkit-box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
   box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
 }
+
 .skillrow img{
   display: block;
   margin: 0 auto;
   width: 100px;
 }
+
 .skillrow h2{
   display: block;
   width: 100%;
   text-align: center;
 }
+
 .skillrow hr{
   width: 250px;
   margin: 0 auto;
   border: black .5px solid;
   margin-bottom: 10px;
 }
+
 .skillrow p{
   display: block;
   width: 100%;
@@ -702,6 +593,7 @@ line-height: 24px;
   text-align: left;
   float: left;
 }
+
 .talentList li {
   width: 100%;
   font-size: 17px;
@@ -714,75 +606,67 @@ line-height: 24px;
   margin: 5px auto;
   padding: 5px 0;
   width: 250px;
- }
-
- @media only screen and (min-width: 600px){
-  .skillrow{
-    width: 40%;
-    float: left;
-    margin: 0 5%;
-  }
 }
 
+@media only screen and (min-width: 600px){
+.skillrow{
+  width: 40%;
+  float: left;
+  margin: 0 5%;
+}
+}
 
+/*end skill section ////////////////////////////////////////////////////////*/
+/*porfolio section Styles///////////////////////////////////////////////////////////////*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- .portfolioSection img{
+.portfolioSection img{
   display: block;
   margin: 0 auto;
   width: 100px;
 }
+
 .portfolioSection h2{
   display: block;
   width: 100%;
   text-align: center;
 }
+
 .portfolioSection hr{
   width: 250px;
   margin: 0 auto;
   border: black .5px solid;
   margin-bottom: 10px;
 }
+
 .portfolioSection p{
   display: block;
   width: 100%;
   text-align: center;
   font-size: 1.5rem;
 }
+
 .cd-team li {
-  padding: 0px; }
+  padding: 0px; 
+}
 
 .cd-container ul {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  }
-  .cd-container ul li {
-    flex: 1;
-    flex-basis: 450px;
-    align-items: center;
-    padding: 0 15px;
-    margin: 0 auto; }
-    .cd-container ul li:hover {
-      flex: 2;
-      flex-basis: 500px; }
+}
+
+.cd-container ul li {
+  flex: 1;
+  flex-basis: 450px;
+  align-items: center;
+  padding: 0 15px;
+  margin: 0 auto; 
+}
+
+.cd-container ul li:hover {
+  flex: 2;
+  flex-basis: 500px;
+}
 
 .cd-container button {
   width: 100%;
@@ -798,128 +682,85 @@ line-height: 24px;
   line-height: 25px;
   padding: 12px 0;
   transition: background-color .5s ease;
-  border: 0; }
-  .cd-container button:hover {
-    -webkit-box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
-    box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
-    color: #fff;
-    background-color: #264b6c;
-    text-decoration: none; }
+  border: 0; 
+}
 
+.cd-container button:hover {
+  -webkit-box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
+  box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
+  color: #fff;
+  background-color: #264b6c;
+  text-decoration: none; 
+}
 
+.portPeicePreview {
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 300px;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  border: 3px solid rgba(1, 1, 1, 0.9);
+  transition: all .3s ease-in-out;
+}
 
-    #portfoliopreview1 {
-      background-image: url("../img/inspiraCapture.jpg");
-      background-size: cover; }
+.portPeicePreview:hover {
+  background-position: 50% 35%; 
+}
 
-    #portfoliopreview2 {
-      background-image: url("../img/goingDeeperScreenGrab.jpg");
-      background-size: cover; }
-      
-    #portfoliopreview3 {
-      background-image: url("../img/tpfCapture.jpg");
-      background-size: cover; }
-    
-    #portfoliopreview4 {
-      background-image: url("../img/battersboxScreenGrab.JPG");
-      background-size: cover; }
-    
-    .portPeicePreview {
-      background-position: 50% 50%;
-      height: 300px;
-      width: 100%;
-      margin-top: 50px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      background-repeat: no-repeat;
-      border: 3px solid rgba(1, 1, 1, 0.9);
-      transition: all .3s ease-in-out; }
-      .portPeicePreview:hover {
-        background-position: 50% 35%; }
-      .portPeiceTitle {
-        align-self: flex-end;
-        background-color: rgba(1, 1, 1, 0.75);
-        margin: 0;
-        height: 65px;
-        width: 100%;
-        color: #fff;
-        
-        overflow: hidden;
-        transition: all .3s ease-in-out; 
-      }
-      .portPeiceTitle h3{
-        margin-bottom: 20px;
-      }
-      .portPeiceTitle button{
-        max-width: 200px;
-        margin: 0 auto;
-      }
-      .portPeicePreview:hover .portPeiceTitle{
-        height: 130px;
-      }
+.portPeiceTitle {
+  align-self: flex-end;
+  background-color: rgba(1, 1, 1, 0.75);
+  margin: 0;
+  height: 65px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+  transition: all .3s ease-in-out; 
+}
 
+.portPeiceTitle h3{
+  margin-bottom: 20px;
+}
 
+.portPeiceTitle button{
+  max-width: 200px;
+  margin: 0 auto;
+}
 
+.portPeicePreview:hover .portPeiceTitle{
+  height: 130px;
+}
 
+.CTAbanner {
+  display: block;
+  margin-top: 75px;
+  padding: 0 0 20px 0;
+  position: relative;
+  top: -45px;
+  -webkit-box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.5);
+  box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.5);
+  background-color: #e98324;
+}
 
+.CTAbanner p {
+  color: #fff; 
+}
 
+/*end portfolio section ////////////////////////////////////////////////////////*/
+/*form section Styles///////////////////////////////////////////////////////////////*/
 
-
-
-
-
-
-
-
-
-
-
-      .CTAbanner {
-        display: block;
-        margin-top: 75px;
-        padding: 0 0 20px 0;
-        position: relative;
-        top: -45px;
-        -webkit-box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.5);
-        box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.5);
-        background-color: #e98324; }
-        .CTAbanner p {
-          color: #fff; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          .contactFormSection2 {
-          
-            display: block;
-            margin: 0 auto;
-            border: 2px solid #fff;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            padding: 5px 5px 15px 5px; 
-              width: 90%;
-
-
+.contactFormSection2 {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 5px 5px 15px 5px; 
+  width: 90%;
   max-width: 550px;
   height: auto;
   display: block;
@@ -930,183 +771,83 @@ line-height: 24px;
   -webkit-box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
   box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
   background-color: #fff;
-          }
+}
 
-
-
-          .contactFormSection2 img{
-            display: block;
-            margin: 0 auto;
-            width: 100px;
-          }
-          .contactFormSection2 h2{
-            display: block;
-            width: 100%;
-            text-align: center;
-          }
-          .contactFormSection2 hr{
-            width: 250px;
-            margin: 0 auto;
-            border: black .5px solid;
-            margin-bottom: 10px;
-          }
-          .contactFormSection2 p{
-            display: block;
-            width: 100%;
-            text-align: center;
-            font-size: 1.5rem;
-          }
-          #my_form{
-            width: 80%;
-            max-width: 500px;
-            margin: 0 auto;
-          }
-          input[type='text'], input[type='email'], textarea {
-            width: 100%;
-            clear: both;
-            margin: 5px 0;
-            padding: 5px;
-            height: 80px;
-            font-size: 1.5em;
-            font-weight: 100; 
-            height: 60px;
-            -webkit-box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
-box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
-          }
-          textarea{
-            height: 150px;
-            -webkit-box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
-box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
-          }
-
-
-            @media only screen and (min-width: 767px) {
-              input[type='text'], input[type='email'], textarea {
-                width: 100%;
-                clear: both;
-                margin: 5px 0;
-                padding: 5px;
-                font-size: 1em; } }
-  
-                         
-          #successmessage {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-            color: #000;
-            font-size: 20px;
-            max-width: 300px;
-            text-align: center;
-            padding: 25px 0;
-            line-height: 20px; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-/*
-.resumeSection {
+.contactFormSection2 img{
   display: block;
-  height: 100%;
-  color: #fff;
-  font-size: 30px;
-  margin: 0 5%;
-  margin-bottom: 80px; }
-
-.resumeTitle {
-  border-left: solid #fff 2.5px;
-  height: 150px;
-  position: relative;
-  top: 35px;
-  padding-top: 30px;
-  float: left;
-  margin-top: -225px;
-  transition: all .3s ease-in-out; }
-
-
-.resumeBtn {
-  border-right: solid #fff 2.5px;
-  height: 150px;
-  position: relative;
-  top: 35px;
-  padding-top: 45px;
-  float: right;
-  margin-top: 225px;
-  transition: all .3s ease-in-out; }
-
-
-.resumeReset {
-  margin-top: 0px; }
-
-
-.showPortImg {
-  opacity: 1 !important;
-  transform: translateY(0px) !important; }
-
-*/
-
-/*end of INDEX Styles////////////////////////////////////////////////////////////*/
-/*from styles//////////////////////////////////////////////////////////////////*/
-/*
-#textareastyles {
-  width: 50% !important; }
-  @media only screen and (min-width: 767px) {
-    #textareastyles {
-      width: 100% !important; } }
-
-input:focus, textarea:focus {
-  border: 2px #3a74a6 solid;
-  font-size-adjust: 16px;
-  font-weight: 300;
-  letter-spacing: 1px; }
-
-input[type='email']:invalid:not(:focus):not(:placeholder-shown) {
-  background: pink;
-  border: 2px red solid; }
-
-*/
-
-/*end of FORM Styles////////////////////////////////////////////////////////////*/
-/*
-
-.otherLogoSection{
-  margin:30px 0;
+  margin: 0 auto;
+  width: 100px;
 }
-.otherLogo{
-  padding: 20px 10px;
+
+.contactFormSection2 h2{
+  display: block;
+  width: 100%;
+  text-align: center;
 }
-*/
+
+.contactFormSection2 hr{
+  width: 250px;
+  margin: 0 auto;
+  border: black .5px solid;
+  margin-bottom: 10px;
+}
+
+.contactFormSection2 p{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#my_form{
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input[type='text'], input[type='email'], textarea {
+  width: 100%;
+  clear: both;
+  margin: 5px 0;
+  padding: 5px;
+  height: 80px;
+  font-size: 1.5em;
+  font-weight: 100; 
+  height: 60px;
+  -webkit-box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
+  box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
+}
+
+textarea{
+  height: 150px;
+  -webkit-box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
+  box-shadow:inset 0 0 5px 1px rgba(1,1,1,.15);
+}
+
+#successmessage {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  color: #000;
+  font-size: 20px;
+  max-width: 300px;
+  text-align: center;
+  padding: 25px 0;
+  line-height: 20px;
+}
+
+#googleRecap{
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media only screen and (min-width: 767px) {
+  input[type='text'], input[type='email'], textarea {
+    width: 100%;
+    clear: both;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 1em; 
+  }
+}
