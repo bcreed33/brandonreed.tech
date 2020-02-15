@@ -913,3 +913,6 @@ span#status {
 .otherLogo{
   padding: 20px 10px;
 }
+a.nolink{
+  display: none;
+}
