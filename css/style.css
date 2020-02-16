@@ -100,11 +100,12 @@ footer{
   width: 100%;
   padding: 0%;
   min-height: 525px;
+  overflow: hidden;
 }
 
 #heroGraphicTitel {
   display: block;
-  height: 500px;
+  height: 400px;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -190,6 +191,47 @@ hr {
   z-index: 5;
 }
 
+
+
+.arrowBox {
+  z-index: 999px;
+  display: block;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  top: 0%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 500px;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite; }
+  .downarrow{
+    width: 50px;
+  }
+  .arrowBox p {
+    margin: 0;
+    padding: 0;
+    color: #fff; }
+    @media only screen and (min-width: 900px) {
+      .arrowBox {
+        top: 5%; } }
+        @media only screen and (min-width: 1200px) {
+          .arrowBox {
+            top: 15%; } }
+
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-20px); }
+  60% {
+    transform: translateY(-10px); } }
 
 @media only screen and (min-width: 400px){
   #heroGraphicTitel {
@@ -322,6 +364,10 @@ hr {
     background-size: auto 225px; 
   }
 }
+
+
+
+
 
 /*end hero section////////////////////////////////////////////////////////////*/
 /*nav bar section/////////////////////////////////////////////////////////////*/
@@ -461,7 +507,7 @@ hr {
   width: 100%;
   margin: 0 auto;
   border-radius: 15px;
-  padding-top: 15px;
+  padding-top: 75px;
 }
 
 .aboutsection h3{
@@ -505,8 +551,43 @@ hr {
   display: block;
   float: none;
 }
+.smcontainer{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 35px;
 
-
+}
+.smIcon{
+  flex-grow: 1;
+}
+.smIcon img{
+  width: 90%;
+  max-width: 50px;
+  margin: 0 auto;
+  display: block;
+}
+.transitionSection{
+  background-image: url(../img/orangeSectionCurveCenter.png);
+  background-repeat: no-repeat;
+  background-position: 50% -2%;
+  background-size: contain;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.darkgreytransitionSection{
+  background-image: url(../img/darkgreySectionCurveCenter.png);
+  background-repeat: no-repeat;
+  background-position: 50% 102%;
+  background-size: contain;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
 @media only screen and (min-width: 400px){
   .aboutsection p{
     font-size: 1.5rem;
@@ -540,20 +621,21 @@ hr {
 /*skill section Styles///////////////////////////////////////////////////////////////*/
 
 .skillSection{
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
   width: 100%;
-  margin: 30px auto;
-  display: block;
-  overflow: auto;
+  padding: 10%;
+  bottom: 300px;
+  margin-bottom: -150px;
 }
 
 .skillrow{
-  width: 80%;
-  max-width: 450px;
-  height: auto;
-  display: block;
-  margin: 0px auto 60px;
-  overflow: auto;
+  flex-grow: 1;
+  margin: 15px;
+  padding: 25px 15px;
   border: 2px lightgray solid;
+  background-color: #fff;
   border-radius: 10px;
   padding: 15px 0 25px 0;
   -webkit-box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
@@ -563,7 +645,7 @@ hr {
 .skillrow img{
   display: block;
   margin: 0 auto;
-  width: 100px;
+  width: 90px;
 }
 
 .skillrow h2{
@@ -595,7 +677,7 @@ hr {
 }
 
 .talentList li {
-  width: 100%;
+  width: 85%;
   font-size: 17px;
   line-height: 25px;
   letter-spacing: .1;
@@ -605,16 +687,25 @@ hr {
   background-color: #264b6c;
   margin: 5px auto;
   padding: 5px 0;
-  width: 250px;
+}
+@media only screen and (min-width: 728px){
+  .skillSection{
+     padding:0;
+  }
+}
+@media only screen and (min-width: 1024px){
+  .skillSection{
+     padding:0;
+  }
+  .skillrow{
+    flex-grow: 1;
+    margin: 0 40px;
+    margin-top: 60px;
+    padding:50px 0;
+
+  }
 }
 
-@media only screen and (min-width: 600px){
-.skillrow{
-  width: 40%;
-  float: left;
-  margin: 0 5%;
-}
-}
 
 /*end skill section ////////////////////////////////////////////////////////*/
 /*porfolio section Styles///////////////////////////////////////////////////////////////*/
@@ -737,17 +828,33 @@ hr {
 
 .CTAbanner {
   display: block;
-  margin-top: 75px;
-  padding: 0 0 20px 0;
-  position: relative;
-  top: -45px;
-  -webkit-box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.5);
-  box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.5);
   background-color: #e98324;
+  padding: 0px;
 }
 
 .CTAbanner p {
   color: #fff; 
+}
+
+.transitionSectiontop{
+  background-image: url(../img/orangeSectionCurvetop.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+  width: 100%;
+  height: 200px;
+  position: relative;
+
+}
+
+.transitionSectionbottom{
+  background-image: url(../img/orangeSectionCurvebottom.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  width: 100%;
+  height: 200px;
+  position: relative;
 }
 
 /*end portfolio section ////////////////////////////////////////////////////////*/
@@ -757,9 +864,8 @@ hr {
   display: block;
   margin: 0 auto;
   border: 2px solid #fff;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding: 5px 5px 15px 5px; 
+  margin-top: 0px;
+  margin-bottom: 100px;
   width: 90%;
   max-width: 550px;
   height: auto;
@@ -771,7 +877,9 @@ hr {
   -webkit-box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
   box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
   background-color: #fff;
-}
+  padding:50px 0 35px;
+  position: relative;
+  z-index: 9;}
 
 .contactFormSection2 img{
   display: block;

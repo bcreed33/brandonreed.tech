@@ -165,6 +165,17 @@ portP.map( function (x){
      };
 });
 
+
+
+
+
+
+
+
+
+
+
+
 //////js for the stick nav on scroll
 //Intersection Observer
 let nav = document.querySelector('.navbar');
@@ -181,3 +192,16 @@ const observer = new window.IntersectionObserver(navHandler)
 // this is watching the hero banner
 observer.observe(hero)
 
+ 
+
+window.addEventListener('scroll', function(e){
+    const scrolled = window.pageYOffset;
+    const fname = document.querySelector('.fristName');
+    fname.style.transform = `translate3d(${scrolled * 0.5}px, 0px , 0px )`;
+    const lname = document.querySelector('.lastName');
+    lname.style.transform = `translate3d(-${scrolled * 0.5}px, 0px , 0px )`;
+    const title = document.querySelector('.mytitle');
+    title.style.transform = `translate3d(0px , -${scrolled * 0.75}px, 0px )`;
+    const logo = document.querySelector('.standAlonelogo');
+    logo.style.transform = `translate3d(0px, ${scrolled * 1.25}px, 0px )`;
+});
