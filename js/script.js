@@ -106,7 +106,7 @@ const porfolioCards = portP.map(x =>
     </a>
 </li>`);
 
-document.querySelector('#portPP').innerHTML= porfolioCards;
+///document.querySelector('#portPPP').innerHTML= porfolioCards;
 
 
 
