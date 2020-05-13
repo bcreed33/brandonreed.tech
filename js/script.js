@@ -12,29 +12,32 @@ navTrigger.addEventListener('click', function(e) {
 function myScript(x){
     const selected_portfolio= x.getAttribute('data-type');
     console.log(selected_portfolio);
-    document.querySelector('main').className += " slide-out";
-    document.querySelector('.cd-member-bio.'+ selected_portfolio ).className += " slide-in";
-    document.querySelector('.cd-member-bio-close').className += " is-visible";
-    document.querySelector('main').className += " overflow-hidden";
+    document.querySelector('body').className="freeze";
+    document.querySelector('.portfolio-overlay').classList.add("portfolio-overlay-visable");
+    document.querySelector('.portfolio-piece.'+ selected_portfolio ).className += " slide-in";
+    document.querySelector('.portfolio-close').className += " is-visible";
 }
 //This is going to close the portfolio peices 
-document.querySelector('.cd-overlay, .cd-member-bio-close is-visible').addEventListener('click', function () {
-    document.querySelector('main' ).classList.remove("slide-out");
-    document.querySelector('.cd-member-bio.slide-in').classList.remove("slide-in");
-    document.querySelector('.cd-member-bio-close').classList.remove("is-visible");
+document.querySelector('.portfolio-overlay, .portfolio-close is-visible').addEventListener('click', function () {
+    document.querySelector('body').classList.remove("freeze");
+    document.querySelector('.portfolio-overlay').classList.remove("portfolio-overlay-visable");
+    document.querySelector('.portfolio-piece.slide-in').classList.remove("slide-in");
+    document.querySelector('.portfolio-close').classList.remove("is-visible");
+    
 });
 // This is redundent I know... but im working on it.
-document.querySelector('.cd-member-bio-close').addEventListener('click', function () {
-    document.querySelector('main' ).classList.remove("slide-out");
-    document.querySelector('.cd-member-bio.slide-in').classList.remove("slide-in");
-    document.querySelector('.cd-member-bio-close').classList.remove("is-visible");
+document.querySelector('.portfolio-close').addEventListener('click', function () {
+    document.querySelector('body').classList.remove("freeze");
+    document.querySelector('.portfolio-overlay').classList.remove("portfolio-overlay-visable");
+    document.querySelector('.portfolio-piece.slide-in').classList.remove("slide-in");
+    document.querySelector('.portfolio-close').classList.remove("is-visible");
 });
 
 
 ////All my portfolio peices info. Hope soon to transfer this info into a headless cms platform
 const portP =[{
     portfolio_id : "0",
-    portfolio_title : "4moms",
+    portfolio_title : "4moms - Shopify",
     portfolio_imageUrl : "img/tpfCapture.jpg",
     portfolio_hasGithub: true,
     portfolio_githubUrl: "",
@@ -45,10 +48,15 @@ const portP =[{
         portfolio_talent1 : "talent4",
         portfolio_talent2 : "talent5",
         portfolio_talent3 : "talent6"
+                        }],
+                        portfolio_screenShots : [{
+                            screenShot: "img/tpfCapture.jpg",
+                            screenShot: "img/goingDeeperScreenGrab.jpg"
+                    
                         }]
 },{
     portfolio_id : "1",
-    portfolio_title : "The Batters Box",
+    portfolio_title : "4moms - Ruby & BigComm",
     portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
     portfolio_hasGithub: true,
     portfolio_githubUrl: "",
@@ -59,10 +67,14 @@ const portP =[{
         portfolio_talent1 : "talent7",
         portfolio_talent2 : "talent9",
         portfolio_talent3 : "talent8"
+                        }],
+                        portfolio_screenShots : [{
+                            screenShot: "img/svgicons/logo.svg"
+                    
                         }]
 },{
     portfolio_id : "2",
-    portfolio_title : "Going Deeper",
+    portfolio_title : "Javascript Apps",
     portfolio_imageUrl : "img/goingDeeperScreenGrab.jpg",
     portfolio_hasGithub: true,
     portfolio_githubUrl: "",
@@ -73,10 +85,34 @@ const portP =[{
         portfolio_talent1 : "talent10",
         portfolio_talent2 : "talent12",
         portfolio_talent3 : "talent13"
+                        }],
+                        portfolio_screenShots : [{
+                            screenShot: "img/svgicons/logo.svg",
+                            screenShot: "img/goingDeeperScreenGrab.jpg"
+                    
                         }]
 },{
     portfolio_id : "3",
-    portfolio_title : "Javascript Apps",
+    portfolio_title : "The Batters Box",
+    portfolio_imageUrl : "img/goingDeeperScreenGrab.jpg",
+    portfolio_hasGithub: true,
+    portfolio_githubUrl: "",
+    portfolio_hasurl : false,
+    portfolio_url : "https://goingdeeperconference.letsreedesign.com/",
+    portfolio_copy : "This project needed a quick turn-a-around time of two weeks, due to the event quickly approaching. So with a short timeline, I used webflow to allow me to produce a website demo within a day. After I got the go-ahead form the demo, I worked on completing the static website. Phase two of this project was converting the static website into a WordPress website. With the use of Advanced Custom Fields, I gave my client complete control of all their content, on the website.",
+    portfolio_talent : [{
+        portfolio_talent1 : "talent10",
+        portfolio_talent2 : "talent12",
+        portfolio_talent3 : "talent13"
+                        }],
+                        portfolio_screenShots : [{
+                            screenShot: "img/svgicons/logo.svg",
+                            screenShot: "img/goingDeeperScreenGrab.jpg"
+                    
+                        }]
+},{
+    portfolio_id : "4",
+    portfolio_title : "Going Deeper",
     portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
     portfolio_hasGithub: true,
     portfolio_githubUrl: "",
@@ -87,16 +123,22 @@ const portP =[{
         portfolio_talent1 : "talent7",
         portfolio_talent2 : "talent9",
         portfolio_talent3 : "talent8"
-                        }]
+                        }],
+    portfolio_screenShots : [{
+        screenShot: "img/svgicons/logo.svg",
+        screenShot: "img/goingDeeperScreenGrab.jpg"
+
+    }]                   
 }
 ];
 
 console.log(portP[1].portfolio_hasurl);
 
+
 //////js that is displaying my portfolio cards
 const porfolioCards = portP.map(x =>
-`<li>
-    <a data-type="member-${x.portfolio_id}">
+`<li data-type="portfolio-${x.portfolio_id}" onclick="myScript(this);">
+    <a data-type="portfolio-${x.portfolio_id}">
         <div class="portPeicePreview" style="background-image: url(../${x.portfolio_imageUrl});">
             <div class="portPeiceTitle">
                 <h3>${x.portfolio_title}</h3>
@@ -104,9 +146,9 @@ const porfolioCards = portP.map(x =>
             </div>
         </div>
     </a>
-</li>`);
+</li>`).join('');
 
-///document.querySelector('#portPPP').innerHTML= porfolioCards;
+document.querySelector('#portPPP').innerHTML= porfolioCards;
 
 
 
@@ -117,35 +159,63 @@ const talentListMapped = talentList.map(x =>
     `${x.portfolio_talent1} <br>
      ${x.portfolio_talent2} <br>
      ${x.portfolio_talent3} <br>
-    `);
+    `)
+    const screenShotImages = x.portfolio_screenShots.map(z =>{
+        const warray = [];
+        warray.push(z.screenShot)
+        return warray;
+    }
+    )
+/*let screenShotImages = x.portfolio_screenShots.map(z =>{
+    const arrayOfImages = "";
+    arrayOfImages.push(...z.screenShot);
+    return arrayOfImages
+    
+});*/
+
+const somee=[];
+somee.push(...`${screenShotImages}`)
+
+console.log(somee);
 
 
-return `<div class="cd-member-bio member-${x.portfolio_id}">
-    <div class="preview">
-        <img src="${x.portfolio_imageUrl}" alt="Inspira website screen capture">
-    </div>
-    <div class="cd-bio-content">
-        <h1>${x.portfolio_title}</h1>
-        <a href="${x.portfolio_url}" target="_blank" class="button urlBtn text-center">
+
+
+
+return `<div class="portfolio-piece portfolio-${x.portfolio_id}">
+<div class="portfolio-piece-content">
+${screenShotImages}
+
+<h2>${x.portfolio_title}</h2>
+<p>
+${x.portfolio_copy}
+</p>
+<div class="talentSection">
+<h3>
+Talent Showcased:
+</h3>
+<p>
+${talentListMapped}
+</p>
+</div>
+<div class="extraInfo">
+
+            <div clas="linkSection">
+            <a href="${x.portfolio_url}" target="_blank" class="button urlBtn text-center">
             Launch Site
-        </a>
-        <a href="${x.portfolio_githubUrl}" target="_blank" class="button githubBtn text-center">
-        View Code
-        </a>
-        <br>
-        <h2>
-            Talent Showcased:
-        </h2>
-        <p>
-            ${talentListMapped}
-        </p>
-        <h2>
-            Description:
-        </h2>
-        <p>
-            ${x.portfolio_copy}
-        </p>
-    </div>
+            </a>
+            <a href="${x.portfolio_githubUrl}" target="_blank" class="button githubBtn text-center">
+            View Code
+            </a>
+            </div>
+
+</div>
+
+<div class="portfolioImages">
+<img src="${x.portfolio_imageUrl}" alt="Inspira website screen capture">
+
+</div>
+</div>
 </div>` 
 });
 
