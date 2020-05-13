@@ -160,7 +160,7 @@ return `
 </div>
 ` 
 }).join('');
-document.querySelector('#portfolioBios').innerHTML= porfolioBios;
+//document.querySelector('#portfolioBios').innerHTML= porfolioBios;
 portP.map( function (x){
     const portfolioNumber = x.portfolio_id;
     const p = portfolioNumber.toString();
