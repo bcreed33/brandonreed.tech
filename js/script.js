@@ -44,16 +44,12 @@ const portP =[{
     portfolio_hasurl : false,
     portfolio_url : "http://www.tapolcifoundation.org/",
     portfolio_copy : "For the Tapolci Foundation website, I worked with a team and was responsible for all the front-end related tasks. I made sure the website was fully responsive and took care of other things like typography, creating custom graphics, and taking the photographs that were shown on the website.",
-    portfolio_talent : [{
-        portfolio_talent1 : "talent4",
-        portfolio_talent2 : "talent5",
-        portfolio_talent3 : "talent6"
-                        }],
-                        portfolio_screenShots : [{
-                            screenShot: "img/tpfCapture.jpg",
-                            screenShot: "img/goingDeeperScreenGrab.jpg"
-                    
-                        }]
+    portfolio_talent : ["talent4", "talent5","talent6"],
+    portfolio_screenShots : {
+        screenShot: "img/tpfCapture.jpg",
+        screenShot2: "img/goingDeeperScreenGrab.jpg"
+
+    }
 },{
     portfolio_id : "1",
     portfolio_title : "4moms - Ruby & BigComm",
@@ -63,15 +59,11 @@ const portP =[{
     portfolio_hasurl : true,
     portfolio_url : "http://thebattersbox.letsreedesign.com/",
     portfolio_copy : "The Batters Box is a fictitious restaurant that I came up with. I first developed the website statically then converted it over to a WordPress platform. This website is my playground for WordPress development, whenever I learn something new about WordPress this will be the place where I try it out. Right now this website use plugins such as ACF, contact form 7, icegram, and The Events Calendar.",
-    portfolio_talent : [{
-        portfolio_talent1 : "talent7",
-        portfolio_talent2 : "talent9",
-        portfolio_talent3 : "talent8"
-                        }],
-                        portfolio_screenShots : [{
-                            screenShot: "img/svgicons/logo.svg"
-                    
-                        }]
+    portfolio_talent : ["talent14", "talent15","talent16"],
+    portfolio_screenShots : {
+        screenShot: "img/svgicons/logo.svg"
+
+    }
 },{
     portfolio_id : "2",
     portfolio_title : "Javascript Apps",
@@ -81,16 +73,12 @@ const portP =[{
     portfolio_hasurl : false,
     portfolio_url : "https://goingdeeperconference.letsreedesign.com/",
     portfolio_copy : "This project needed a quick turn-a-around time of two weeks, due to the event quickly approaching. So with a short timeline, I used webflow to allow me to produce a website demo within a day. After I got the go-ahead form the demo, I worked on completing the static website. Phase two of this project was converting the static website into a WordPress website. With the use of Advanced Custom Fields, I gave my client complete control of all their content, on the website.",
-    portfolio_talent : [{
-        portfolio_talent1 : "talent10",
-        portfolio_talent2 : "talent12",
-        portfolio_talent3 : "talent13"
-                        }],
-                        portfolio_screenShots : [{
-                            screenShot: "img/svgicons/logo.svg",
-                            screenShot: "img/goingDeeperScreenGrab.jpg"
-                    
-                        }]
+    portfolio_talent : ["talent24", "talent25","talent26"],
+    portfolio_screenShots : {
+        screenShot: "img/svgicons/logo.svg",
+        screenShot2: "img/goingDeeperScreenGrab.jpg"
+
+    }
 },{
     portfolio_id : "3",
     portfolio_title : "The Batters Box",
@@ -100,16 +88,12 @@ const portP =[{
     portfolio_hasurl : false,
     portfolio_url : "https://goingdeeperconference.letsreedesign.com/",
     portfolio_copy : "This project needed a quick turn-a-around time of two weeks, due to the event quickly approaching. So with a short timeline, I used webflow to allow me to produce a website demo within a day. After I got the go-ahead form the demo, I worked on completing the static website. Phase two of this project was converting the static website into a WordPress website. With the use of Advanced Custom Fields, I gave my client complete control of all their content, on the website.",
-    portfolio_talent : [{
-        portfolio_talent1 : "talent10",
-        portfolio_talent2 : "talent12",
-        portfolio_talent3 : "talent13"
-                        }],
-                        portfolio_screenShots : [{
-                            screenShot: "img/svgicons/logo.svg",
-                            screenShot: "img/goingDeeperScreenGrab.jpg"
-                    
-                        }]
+    portfolio_talent : ["talent34", "talent35","talent36"],
+    portfolio_screenShots : {
+        screenShot: "img/svgicons/logo.svg",
+        screenShot2: "img/goingDeeperScreenGrab.jpg"
+
+    }
 },{
     portfolio_id : "4",
     portfolio_title : "Going Deeper",
@@ -119,18 +103,13 @@ const portP =[{
     portfolio_hasurl : true,
     portfolio_url : "http://thebattersbox.letsreedesign.com/",
     portfolio_copy : "The Batters Box is a fictitious restaurant that I came up with. I first developed the website statically then converted it over to a WordPress platform. This website is my playground for WordPress development, whenever I learn something new about WordPress this will be the place where I try it out. Right now this website use plugins such as ACF, contact form 7, icegram, and The Events Calendar.",
-    portfolio_talent : [{
-        portfolio_talent1 : "talent7",
-        portfolio_talent2 : "talent9",
-        portfolio_talent3 : "talent8"
-                        }],
-    portfolio_screenShots : [{
+    portfolio_talent : ["talent44", "talent45","talent46"],
+    portfolio_screenShots : {
         screenShot: "img/svgicons/logo.svg",
-        screenShot: "img/goingDeeperScreenGrab.jpg"
+        screenShot2: "img/goingDeeperScreenGrab.jpg"
 
-    }]                   
-}
-];
+    }             
+}];
 
 console.log(portP[1].portfolio_hasurl);
 
@@ -154,29 +133,13 @@ document.querySelector('#portPPP').innerHTML= porfolioCards;
 
 //////js that is filling out the info for the portfolio slide-out boxes
 const porfolioBios = portP.map( function (x){
-const talentList = x.portfolio_talent
-const talentListMapped = talentList.map(x => 
-    `${x.portfolio_talent1} <br>
-     ${x.portfolio_talent2} <br>
-     ${x.portfolio_talent3} <br>
-    `)
-    const screenShotImages = x.portfolio_screenShots.map(z =>{
-        const warray = [];
-        warray.push(z.screenShot)
-        return warray;
-    }
-    )
-/*let screenShotImages = x.portfolio_screenShots.map(z =>{
-    const arrayOfImages = "";
-    arrayOfImages.push(...z.screenShot);
-    return arrayOfImages
-    
-});*/
+const talentList = x.portfolio_talent;
+const talentListMapped = talentList.map(talent => `<p>${talent}</p>`).join('')
+const screenShotList = Object.values(x.portfolio_screenShots);
 
-const somee=[];
-somee.push(...`${screenShotImages}`)
+const screenShotImages = screenShotList.map( imgURL => `<img src="${imgURL}">`).join('');
+//console.log(screenShotImages);
 
-console.log(somee);
 
 
 
@@ -184,7 +147,7 @@ console.log(somee);
 
 return `<div class="portfolio-piece portfolio-${x.portfolio_id}">
 <div class="portfolio-piece-content">
-${screenShotImages}
+
 
 <h2>${x.portfolio_title}</h2>
 <p>
@@ -212,8 +175,7 @@ ${talentListMapped}
 </div>
 
 <div class="portfolioImages">
-<img src="${x.portfolio_imageUrl}" alt="Inspira website screen capture">
-
+${screenShotImages}
 </div>
 </div>
 </div>` 
