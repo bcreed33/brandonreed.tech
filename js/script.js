@@ -124,7 +124,7 @@ document.querySelector('#portPPP').innerHTML= porfolioCards;
 const porfolioBios = portP.map( function (x){
 const talentList = x.portfolio_talent;
 //Mapping through the talent list array
-const talentListMapped = talentList.map(talent => `<p>${talent}</p>`).join('')
+const talentListMapped = talentList.map(talent => `<p>${talent}</p>`).join('');
 // Storeing the object values inside the portfolio_screenShots in this const
 const screenShotList = Object.values(x.portfolio_screenShots);
 const screenShotImages = screenShotList.map( imgURL => `<img src="${imgURL}">`).join('');
@@ -159,7 +159,7 @@ return `
     </div>
 </div>
 ` 
-});
+}).join('');
 document.querySelector('#portfolioBios').innerHTML= porfolioBios;
 portP.map( function (x){
     const portfolioNumber = x.portfolio_id;
