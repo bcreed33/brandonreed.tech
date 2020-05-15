@@ -1035,3 +1035,40 @@ a.nolink{
 
 
 
+
+/*light box*/
+.lightBoxWrapper{
+  background-color: rgba(1,1,1,.75);
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999999;
+  display: none;
+  top: 0;
+}
+.lightBox{
+  width: 80%;
+  display: block;
+  background-color: white;
+  position: fixed;
+
+  top: 10%;
+  left: 0;
+  right: 0;
+  height: 80vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.lightBox img{
+  width: 100%;
+}
+.showLightBox{
+  display: block;
+}
+
+a.close-button.lightBox-close.is-visible{
+  background-color: black !important;
+  z-index: 99999;
+  color: white;
+}

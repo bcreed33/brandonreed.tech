@@ -12,9 +12,10 @@ navTrigger.addEventListener('click', function(e) {
 function myScript(x){
     const selected_portfolio= x.getAttribute('data-type');
     console.log(selected_portfolio);
+    
     document.querySelector('body').className="freeze";
-    document.querySelector('.portfolio-overlay').classList.add("portfolio-overlay-visable");
-    document.querySelector('.portfolio-piece.'+ selected_portfolio ).className += " slide-in";
+    document.querySelector('.portfolio-overlay').className +=" portfolio-overlay-visable";
+    document.querySelector(`.portfolio-piece.${selected_portfolio}`).className += " slide-in";
     document.querySelector('.portfolio-close').className += " is-visible";
 }
 //This is going to close the portfolio peices 
@@ -116,34 +117,59 @@ const porfolioCards = portP.map(x =>
         </div>
     </a>
 </li>`).join('');
-//document.querySelector('#portPPP').innerHTML= porfolioCards;
+document.querySelector('#portPPP').innerHTML= porfolioCards;
+
+
+function lightBox(lightboxImage){
+    console.log("this is the lightbox function");
+    console.log(lightboxImage);
+    const lightBoxWrapper = document.querySelector('.lightBoxWrapper');
+    const theLightBox = document.querySelector('.lightBox');
+    theLightBox.innerHTML= `
+    <img src="${lightboxImage.src}">
+    `;
+    lightBoxWrapper.classList.add("showLightBox");
+    document.querySelector('.lightBox-close').classList.add("is-visible");
+
+
+
+};
+
+document.querySelector('.lightBox-close').addEventListener('click', function () {
+    document.querySelector('.lightBox-close').classList.remove("is-visible");
+    document.querySelector('.lightBoxWrapper').classList.remove("showLightBox");
+});
+
+
 
 
 
 //////js that is filling out the info for the portfolio slide-out boxes
-const porfolioBios = portP.map( function (x){
+const porfolioBios = portP.map(function (x){
 const talentList = x.portfolio_talent;
 //Mapping through the talent list array
 const talentListMapped = talentList.map(talent => `<p>${talent}</p>`).join('');
 // Storeing the object values inside the portfolio_screenShots in this const
 const screenShotList = Object.values(x.portfolio_screenShots);
-const screenShotImages = screenShotList.map( imgURL => `<img src="${imgURL}">`).join('');
+const screenShotImages = screenShotList.map( imgURL => `<img onclick="lightBox(this);" src="${imgURL}">`).join('');
 return `
 <div class="portfolio-piece portfolio-${x.portfolio_id}">
     <div class="portfolio-piece-content">
-        <h2>
-            ${x.portfolio_title}
-        </h2>
-        <p>
-            ${x.portfolio_copy}
-        </p>
+        <div class="portfolio-content">
+            <h2>
+                ${x.portfolio_title}
+            </h2>
+            <p>
+                ${x.portfolio_copy}
+            </p>
+        </div>
         <div class="talentSection">
             <h3>
                 Talent Showcased:
             </h3>
-            <p>
+            <div>
                 ${talentListMapped}
-            </p>
+            </div>
         </div>
         <div clas="linkSection">
             <a href="${x.portfolio_url}" target="_blank" class="button urlBtn text-center">
@@ -160,7 +186,7 @@ return `
 </div>
 ` 
 }).join('');
-//document.querySelector('#portfolioBios').innerHTML= porfolioBios;
+document.querySelector('#portfolioBios').innerHTML= porfolioBios;
 portP.map( function (x){
     const portfolioNumber = x.portfolio_id;
     const p = portfolioNumber.toString();

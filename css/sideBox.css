@@ -1,5 +1,34 @@
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .portfolio-overlay{
     top: 0;
     left: 0;
@@ -228,7 +257,7 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     }
 }
 
-.portfolio-close {
+.close-button {
     font-size: 50px;
     text-align: center;
     line-height: 40px;
@@ -246,7 +275,7 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     display: none;
 }
 
-.portfolio-close.is-visible {
+.is-visible {
     display: block;
     -webkit-animation: cd-move-in .8s;
     -moz-animation: cd-move-in .8s;
@@ -254,7 +283,7 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
 }
 
 @media only screen and (min-width:1200px) {
-    .portfolio-close {
+    .close-button {
         right: 20px;
         top: 20px
     }
@@ -324,3 +353,29 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
         transform: translateX(0)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+.portfolio-piece-content{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.talentlist{
+    display: flex;
+    flex-flow: row wrap;
+}
+.linkSection{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
