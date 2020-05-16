@@ -45,8 +45,10 @@ const portP =[{
     portfolio_copy : "For the Tapolci Foundation website, I worked with a team and was responsible for all the front-end related tasks. I made sure the website was fully responsive and took care of other things like typography, creating custom graphics, and taking the photographs that were shown on the website.",
     portfolio_talent : ["talent4", "talent5","talent6"],
     portfolio_screenShots : {
-        screenShot: "img/tpfCapture.jpg",
-        screenShot2: "img/goingDeeperScreenGrab.jpg"
+        screenShot: "img/old4momsDesktop.jpg",
+        screenShot2: "img/goingDeeperScreenGrab.jpg",
+        screenShot3: "img/tpfCapture.jpg",
+        screenShot4: "img/goingDeeperScreenGrab.jpg"
 
     }
 },{
@@ -123,10 +125,11 @@ document.querySelector('#portPPP').innerHTML= porfolioCards;
 function lightBox(lightboxImage){
     console.log("this is the lightbox function");
     console.log(lightboxImage);
+    let imgURL = lightboxImage.getAttribute('data-src');
     const lightBoxWrapper = document.querySelector('.lightBoxWrapper');
     const theLightBox = document.querySelector('.lightBox');
     theLightBox.innerHTML= `
-    <img src="${lightboxImage.src}">
+    <img src="${imgURL}">
     `;
     lightBoxWrapper.classList.add("showLightBox");
     document.querySelector('.lightBox-close').classList.add("is-visible");
@@ -151,7 +154,16 @@ const talentList = x.portfolio_talent;
 const talentListMapped = talentList.map(talent => `<p>${talent}</p>`).join('');
 // Storeing the object values inside the portfolio_screenShots in this const
 const screenShotList = Object.values(x.portfolio_screenShots);
-const screenShotImages = screenShotList.map( imgURL => `<img onclick="lightBox(this);" src="${imgURL}">`).join('');
+const screenShotImages = screenShotList.map( imgURL => `
+<div onclick="lightBox(this);" data-src="${imgURL}" class="screenshotOverlayContents">
+    <div class="screenshotOverlay"></div>
+    <img class="screenshotImage"  src="${imgURL}">
+    <div class="screenshotContent fadeIn-bottom">
+        <img class="screenshotOverlayImage" src="img/svgicons/006-cv-white.png">
+        <p>Click To View More</p>
+    </div>
+</div>`).join('');
+
 return `
 <div class="portfolio-piece portfolio-${x.portfolio_id}">
     <div class="portfolio-piece-content">
