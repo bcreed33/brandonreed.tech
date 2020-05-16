@@ -172,12 +172,13 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     margin: 0 auto;
     padding: 10px
 }
+/*
 .portfolio-piece a{
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-} 
+} */
 
 .extraInfo{
     display: flex;
@@ -355,7 +356,10 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
 }
 
 
-
+.talentSection div{
+    display: flex;
+    flex-flow: row wrap;
+}
 
 
 
@@ -376,8 +380,12 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
 }
 .linkSection{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
 }
+
 .portfolioImages{
     display: flex;
     flex-flow: row wrap;

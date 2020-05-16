@@ -19,34 +19,49 @@ function myScript(x){
     document.querySelector('.portfolio-close').className += " is-visible";
 }
 //This is going to close the portfolio peices 
-document.querySelector('.portfolio-overlay, .portfolio-close is-visible').addEventListener('click', function () {
+document.querySelector('.portfolio-overlay, .portfolio-close is-visible').addEventListener('click', closePortfolioSelection);
+document.querySelector('.portfolio-close').addEventListener('click', closePortfolioSelection);
+function closePortfolioSelection(){
     document.querySelector('body').classList.remove("freeze");
     document.querySelector('.portfolio-overlay').classList.remove("portfolio-overlay-visable");
     document.querySelector('.portfolio-piece.slide-in').classList.remove("slide-in");
     document.querySelector('.portfolio-close').classList.remove("is-visible");
-    
-});
-// This is redundent I know... but im working on it.
-document.querySelector('.portfolio-close').addEventListener('click', function () {
-    document.querySelector('body').classList.remove("freeze");
-    document.querySelector('.portfolio-overlay').classList.remove("portfolio-overlay-visable");
-    document.querySelector('.portfolio-piece.slide-in').classList.remove("slide-in");
-    document.querySelector('.portfolio-close').classList.remove("is-visible");
-});
+};
+//this is closing the light box
+document.querySelector('.lightBox-close').addEventListener('click', closeLightBox);
+document.querySelector('.lightBoxWrapper').addEventListener('click', closeLightBox);
+function closeLightBox(){
+    document.querySelector('.lightBox-close').classList.remove("is-visible");
+    document.querySelector('.lightBoxWrapper').classList.remove("showLightBox");
+};
 
+
+document.addEventListener('keydown', logKey);
+function logKey(e) {
+    //console.log(e);
+    if (e.key == "Escape") {
+        const lightBoxIsOpen = document.querySelector('div.lightBoxWrapper').classList.contains("showLightBox");
+        const onlyPortfolioIsOpen = document.querySelector('.portfolio-overlay').classList.contains("portfolio-overlay-visable");
+        if (lightBoxIsOpen === true) {
+            closeLightBox();
+        }if(onlyPortfolioIsOpen === true && lightBoxIsOpen === false){
+            closePortfolioSelection();
+        }else{};
+    };
+};
 
 ////All my portfolio peices info. Hope soon to transfer this info into a headless cms platform
 const portP =[{
     portfolio_id : "0",
     portfolio_title : "4moms - Shopify",
     portfolio_imageUrl : "img/tpfCapture.jpg",
-    portfolio_githubUrl: "",
+    portfolio_githubUrl: "http://www.tapolcifoundation.org/",
     portfolio_url : "http://www.tapolcifoundation.org/",
     portfolio_copy : "For the Tapolci Foundation website, I worked with a team and was responsible for all the front-end related tasks. I made sure the website was fully responsive and took care of other things like typography, creating custom graphics, and taking the photographs that were shown on the website.",
     portfolio_talent : ["talent4", "talent5","talent6"],
     portfolio_screenShots : {
         screenShot: "img/old4momsDesktop.jpg",
-        screenShot2: "img/goingDeeperScreenGrab.jpg",
+        screenShot2: "img/old4momsMobile.png",
         screenShot3: "img/tpfCapture.jpg",
         screenShot4: "img/goingDeeperScreenGrab.jpg"
 
@@ -138,12 +153,6 @@ function lightBox(lightboxImage){
 
 };
 
-document.querySelector('.lightBox-close').addEventListener('click', function () {
-    document.querySelector('.lightBox-close').classList.remove("is-visible");
-    document.querySelector('.lightBoxWrapper').classList.remove("showLightBox");
-});
-
-
 
 
 
@@ -183,11 +192,11 @@ return `
                 ${talentListMapped}
             </div>
         </div>
-        <div clas="linkSection">
-            <a href="${x.portfolio_url}" target="_blank" class="button urlBtn text-center">
+        <div class="linkSection">
+            <button href="${x.portfolio_url}" target="_blank" class="button urlBtn text-center">
                 Launch Site
             </a>
-            <a href="${x.portfolio_githubUrl}" target="_blank" class="button githubBtn text-center">
+            <button href="${x.portfolio_githubUrl}" target="_blank" class="button githubBtn text-center">
                 View Code
             </a>
         </div>
