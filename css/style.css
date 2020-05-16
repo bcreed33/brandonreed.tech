@@ -92,6 +92,11 @@ footer{
   margin: 0 auto;
 
 }
+
+.freeze{
+  height: 100% !important;
+  overflow: hidden!important;
+}
 /*end of Global styles////////////////////////////////////////////////////////*/
 /*hero section////////////////////////////////////////////////////////////////*/
 
@@ -388,7 +393,7 @@ text-align: center;}
   width: 100%;
   max-width: 100%;
   background: white;
-  z-index: 9999;
+  z-index: 777;
   border-radius: 0;
 }
 
@@ -434,7 +439,9 @@ text-align: center;}
   font-size: 16px;
   line-height: 50px;
 }
-
+.navbar-sticky .nav-link{
+  height: 65px !important;
+}
 .nav-link.active{
   background-color: red;
 }
@@ -471,6 +478,10 @@ text-align: center;}
     width:20%;
     padding: 10px 0;
     margin: 0;
+  }
+
+  .navbar-sticky .navbar-brand img{
+    width: 25px;
   }
 
   .navbar-brand img{
@@ -573,7 +584,7 @@ text-align: center;}
   flex-wrap: nowrap;
   justify-content: space-around;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   margin-top: 35px;
 
@@ -588,7 +599,6 @@ text-align: center;}
   display: block;
 }
 .transitionSection{
-
   background-color: #E98324;
   position: relative;
   width: 100%;
@@ -711,7 +721,17 @@ text-align: center;}
   text-align: center;
   font-size: 1.5rem;
 }
-
+#resume{
+  flex-basis: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#resume h3{
+  flex: 1px;
+  justify-content: flex-end;
+}
 .talentList{
   width: 100%;
   margin: 0 auto;
@@ -775,17 +795,14 @@ text-align: center;}
   font-size: 1.5rem;
 }
 
-.cd-team li {
-  padding: 0px; 
-}
 
-.cd-container ul {
+.portfolio-container ul {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.cd-container ul li {
+.portfolio-container ul li {
   flex: 1;
   flex-basis: 450px;
   align-items: center;
@@ -793,12 +810,12 @@ text-align: center;}
   margin: 0 auto; 
 }
 
-.cd-container ul li:hover {
+.portfolio-container ul li:hover {
   flex: 2;
   flex-basis: 500px;
 }
 
-.cd-container button {
+.portfolio-container button {
   width: 100%;
   font-size: 18px;
   display: block;
@@ -815,7 +832,7 @@ text-align: center;}
   border: 0; 
 }
 
-.cd-container button:hover {
+.portfolio-container button:hover {
   -webkit-box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
   box-shadow: 1px 3px 0 2px rgba(1, 1, 1, 0.2);
   color: #fff;
@@ -828,7 +845,8 @@ text-align: center;}
   background-position: 50% 50%;
   height: 350px;
   width: 100%;
-  margin-top: 50px;
+  max-width: 550px;
+  margin: 50px auto 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -871,10 +889,23 @@ text-align: center;}
   background-color: #e98324;
   padding: 75px 0px;
 }
+#CTAcontent{
+ display: flex;
+ flex-flow: row nowrap;
+ width: 90%;
+ max-width: 650px;
+ margin: 0 auto;
+}
+#CTAcontent div{
+  flex: 1;
+}
 
+.CTAbanner h2{
+  margin: 25px 0;
+}
 .CTAbanner p {
   font-size: 2rem;
-  max-width: 450px;
+  max-width: 700px;
   width: 90%;
   margin: 0 auto;
   padding: 25px 0;
@@ -998,9 +1029,46 @@ textarea{
     font-size: 1em; 
   }
 }
-a.nolink{
+button.nolink{
   display: none;
 }
 
 
 
+
+/*light box*/
+.lightBoxWrapper{
+  background-color: rgba(1,1,1,.75);
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999999;
+  display: none;
+  top: 0;
+}
+.lightBox{
+  width: 80%;
+  display: block;
+  background-color: white;
+  position: fixed;
+
+  top: 10%;
+  left: 0;
+  right: 0;
+  height: 80vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.lightBox img{
+  width: 100%;
+}
+.showLightBox{
+  display: block;
+}
+
+a.close-button.lightBox-close.is-visible{
+  background-color: black !important;
+  z-index: 99999;
+  color: white;
+}

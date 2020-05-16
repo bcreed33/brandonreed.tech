@@ -117,7 +117,7 @@
                 </p>
                 <hr>
                 <h4> 
-                    I'm on the internet, lets connect! 
+                    Lets connect! 
                 </h4>
                 <div class="smcontainer">
                         <div class="smIcon">
@@ -159,11 +159,10 @@
                     <p>The Languages I Speak:</p>
                     <ul class="talentList">
                         <li>HTML/HAML</li>
-                        <li>CSS/SASS</li>
-                        <li>Flexbox</li>
-                        <li>JavaScript</li>
-                        <li>WordPress</li>
-                        <li>UI/UX Design</li>
+                        <li>CSS/SASS/Flexbox</li>
+                        <li>JavaScript ES6</li>
+                        <li>Shopify/BigCommerce</li>
+                        <li>Ruby on Rails</li>
                         <li>Bootstrap/ Foundation</li>
                         <li>Structured Data</li>
                     </ul>
@@ -175,18 +174,22 @@
                     <p>The Tools in my tool kit:</p>
                     <ul class="talentList">
                         <li>GitHub/Gitlab</li>
+                        <li>Amazon S3</li>
                         <li>Netfliy</li>
-                        <li>VS Code</li>
-                        <li>Atom.io</li>
-                        <li>Sketch</li>
-                        <li>Photoshop</li>
-                        <li>Illustrator</li>
-                        <li>Lightroom</li>
+                        <li>Salesforce</li>
+                        <li>Zendesk</li>
+                        <li>VS Code/Atom.io</li>
+                        <li>Sketch/Photoshop</li>
                     </ul>
                 </div>
+               <!-- <div id="resume">
+                <h3>View My Resume Here.</h3>
+                <a href="https://github.com/bcreed33" target="_blank" class="button">Resume</a>
+            </div>-->
             </div>
         </div>
     </div>
+    <hr>
     <a name="portfolio" id="portScroll"></a>
 </div>
 
@@ -199,8 +202,8 @@
                 <h2>My Portfolio</h2>
                 <hr>
                 <p>Here are a few of my most recent projects:</p>
-                <section class="cd-team cd-section">
-                    <div class="cd-container">
+                <section class="portfolio-section">
+                    <div class="portfolio-container">
                     <ul id="portPPP">
                         <p>Currently working on getting my portfilio work in tip-top shape!</p>
                     <!--This section will be populated by my javascript-->      
@@ -215,13 +218,18 @@
 
 
 <div class="transitionSectiontop"></div>
-<div class="CTAbanner container-fluid">
-    <div class="container text-center">
-        <img src="img/svgicons/006-cv-white.png" alt="portfolio icon" class="sectionIcon">
-        <h2>GitHub Projects</h2>
-        <p>Check out my JavaScript apps and the rest of my current projects on my GitHub page.</p>
+<div class="CTAbanner">
+    <img src="img/svgicons/006-cv-white.png" alt="portfolio icon" class="sectionIcon">
+    <div class="container" id="CTAcontent">
+    <div class="text-center">    
+        <h2>View My Resume</h2>
         <a href="https://github.com/bcreed33" target="_blank" class="button">Visit</a>
     </div>
+    <div class="text-center">    
+        <h2>Visit My Github</h2>
+        <a href="https://github.com/bcreed33" target="_blank" class="button">Visit</a>
+    </div>
+</div>
     <a name="contact" id="contactScroll"></a>
 </div>
 <div class="transitionSectionbottom"></div>
@@ -295,14 +303,20 @@ if( urlHash === "#netFormSub"){
     </div>
 </footer>
 
-<div class="cd-overlay"></div>
-</main>
-
-<!-- portfolio slide out boxes sections---------------------------------------->
+<div class="portfolio-overlay"></div>
+<a class="close-button portfolio-close">×</a>
+<div class="lightBoxWrapper">
+<div class="lightBox"></div>
+<a class="close-button lightBox-close">×</a>
+</div>
 <div id="portfolioBios">
     <!--This section will be populated by my javascript-->  
 </div>
-<a class="cd-member-bio-close">×</a>
+
+</main>
+
+<!-- portfolio slide out boxes sections---------------------------------------->
+
 
 
 
