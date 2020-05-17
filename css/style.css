@@ -43,10 +43,10 @@ footer{
   font-size: 18px;
   z-index: 2;
   position: relative;
-  padding: 50px;
+  padding: 50px auto;
 }
 .footercopy{
-  margin: 50px;
+  margin: 50px auto;
 }
 .sectionSpacing {
   padding-top: 50px;
@@ -526,6 +526,7 @@ text-align: center;}
 /*end nav bar section////////////////////////////////////////////////////////*/
 /*about section Styles///////////////////////////////////////////////////////////////*/
 
+
 .aboutsection{
   background-color: #e98324;
   position: relative;
@@ -533,7 +534,7 @@ text-align: center;}
   width: 100%;
   margin: 0 auto;
   border-radius: 15px;
-  padding-top: 100px;
+  padding-top: 50px;
   z-index: 1;
 }
 
@@ -650,6 +651,9 @@ text-align: center;}
 }
 
 @media only screen and (min-width: 600px){
+  .aboutsection{
+    margin-top: 75px;
+  }
   .aboutsection h4{ 
     max-width: 100%;
     font-size: 1.75rem;
@@ -891,13 +895,15 @@ text-align: center;}
 }
 #CTAcontent{
  display: flex;
- flex-flow: row nowrap;
- width: 90%;
+ flex-flow: row wrap;
+ width: 85%;
  max-width: 650px;
  margin: 0 auto;
+ margin-top: 15px;
 }
 #CTAcontent div{
   flex: 1;
+  flex-basis: 40%;
 }
 
 .CTAbanner h2{

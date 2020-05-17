@@ -61,14 +61,14 @@ const portP =[{
     portfolio_talent : ["talent4", "talent5","talent6"],
     portfolio_screenShots : {
         screenShot: "img/old4momsDesktop.jpg",
-        screenShot2: "img/old4momsMobile.png",
-        screenShot3: "img/tpfCapture.jpg",
-        screenShot4: "img/goingDeeperScreenGrab.jpg"
+        screenShot2: "img/old4momsDesktop.jpg",
+        screenShot3: "img/old4momsDesktop.jpg",
+        screenShot4: "img/old4momsDesktop.jpg"
 
     }
 },{
     portfolio_id : "1",
-    portfolio_title : "4moms - Ruby & BigComm",
+    portfolio_title : "4moms - BigComm",
     portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
     portfolio_githubUrl: "",
     portfolio_url : "http://thebattersbox.letsreedesign.com/",

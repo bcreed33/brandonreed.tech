@@ -148,10 +148,9 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
 }
 
 .portfolio-piece .portfolio-piece-content {
-    padding: .25em;
-    /*padding-top: 0px!important;*/
+    padding: 1em;
     color: #000;
-    padding-top: 0px !important;
+    padding-top: 35px;
 }
 
 .portfolio-piece .portfolio-piece-content h3 {
@@ -184,6 +183,130 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     display: flex;
 }
 
+
+
+
+
+.talentSection div{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+
+
+
+
+
+
+.portfolio-piece-content{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.talentlist{
+    display: flex;
+    flex-flow: row wrap;
+}
+.linkSection{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+.linkSection button{
+    margin: 10px auto;
+}
+
+.portfolioImages{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+
+.screenshotOverlayContents .screenshotImage{
+    width: 100%;
+    display: block;
+}
+
+.portfolioImages .screenshotOverlayContents{
+    display: block;
+    max-height: 300px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.screenshotOverlayContents {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+ .screenshotOverlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    cursor: zoom-in;
+  }
+  
+  .screenshotOverlayContents:hover .screenshotOverlay{
+    opacity: 1;
+    cursor: zoom-in;
+  }
+  
+
+  .screenshotContent {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: zoom-in;
+    color: white;
+  }
+  .screenshotContent .screenshotOverlayImage{
+      width: 125px;
+      display: block;
+
+  }
+  
+  .screenshotOverlayContents:hover .screenshotContent{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  .fadeIn-bottom{
+    top: 80%;
+  }
+
+  @media only screen and (min-width:600px) {
+  .portfolio-piece .portfolio-piece-content {
+      padding: 1em;
+  }
+}
+
 @media only screen and (min-width:768px) {
     .portfolio-piece {
         width: 600px;
@@ -199,6 +322,10 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     }
     .portfolio-piece .portfolio-piece-content p {
         font-size: 1.3em
+    }
+    .portfolioImages .screenshotOverlayContents{
+        max-height: 350px;
+        flex-basis: 50%;
     }
 }
 
@@ -259,13 +386,12 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
 }
 
 .close-button {
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
-    line-height: 40px;
+    line-height: 35px;
     font-weight: bold;
-    background-color: #fff;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     position: fixed;
     z-index: 99999;
     top: 1%;
@@ -274,6 +400,11 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     text-decoration: none !important;
     cursor: pointer;
     display: none;
+}
+.portfolio-close{
+    background-color: #337ab7;
+    color: #fff;
+
 }
 
 .is-visible {
@@ -356,124 +487,4 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
 }
 
 
-.talentSection div{
-    display: flex;
-    flex-flow: row wrap;
-}
 
-
-
-
-
-
-
-
-.portfolio-piece-content{
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-}
-
-.talentlist{
-    display: flex;
-    flex-flow: row wrap;
-}
-.linkSection{
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-.portfolioImages{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-
-
-.screenshotOverlayContents .screenshotImage{
-    width: 100%;
-    display: block;
-}
-
-.portfolioImages .screenshotOverlayContents{
-    display: block;
-    width: 50%;
-    max-height: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.screenshotOverlayContents {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
- .screenshotOverlay {
-    background: rgba(0,0,0,0.7);
-    position: absolute;
-    height: 99%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
-    cursor: zoom-in;
-  }
-  
-  .screenshotOverlayContents:hover .screenshotOverlay{
-    opacity: 1;
-    cursor: zoom-in;
-  }
-  
-
-  .screenshotContent {
-    position: absolute;
-    text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-    cursor: zoom-in;
-    color: white;
-  }
-  .screenshotContent .screenshotOverlayImage{
-      width: 125px;
-      display: block;
-
-  }
-  
-  .screenshotOverlayContents:hover .screenshotContent{
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-  }
-  .fadeIn-bottom{
-    top: 80%;
-  }
-
-
-
-/*
-<span class="screenshotOverlay">
-<div class="screenshotOverlayContents">
-
-</div>
-</span>
-*/
