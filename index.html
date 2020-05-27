@@ -242,21 +242,21 @@
                 <img src="img/svgicons/005-mail.png" alt="portfolio icon" class="sectionIcon">
                 <h2>Contact Me</h2>
                 <hr>
-                <form id="my_form" name="Contact" data-netlify="true"  action="/#netFormSub" autocomplete="off">
+                <form name="contact" method="POST" data-netlify="true" id="my_form">
                     <div class="formOption">
-                        <input autocomplete="!off" name="name" id="name_form" type="text" placeholder="Name" required>
+                        <input type="text" name="name" id="name_form" placeholder="Name">
                         <small>Erroor message</small>
                     </div>
                     <div class="formOption">
-                        <input name="email" id="email_form" type="email" placeholder="Email" required>
+                        <input type="email" name="email" id="email_form" placeholder="Email">
                         <small>Erroor message</small>
                     </div>  
                     <div class="formOption">                     
-                        <textarea name="message" id="message_form" type="text" onkeyup="charCount(this);" placeholder="Your Message" required></textarea>
+                        <textarea name="message" id="message_form" onkeyup="charCount(this);" placeholder="Your Message"></textarea>
                         <p id="characterCount"><span id="numberOfChar">0</span>/140</p>
                         <small>Erroor message</small>
                     </div>
-                    <button id="formSubmit" class="button" type="submit" value="Send" > Submit </button>
+                    <button type="submit" id="formSubmit" class="button"> Submit </button>
                     <!--<span id="successmessage">Your message</span>-->
                 </form>
             </div>
