@@ -243,19 +243,13 @@
                 <h2>Contact Me</h2>
                 <hr>
                 <form name="contact" method="POST" data-netlify="true" id="my_form">
-                    <div class="formOption">
+
                         <input type="text" name="name" id="name_form" placeholder="Name">
-                        <small>Erroor message</small>
-                    </div>
-                    <div class="formOption">
+
                         <input type="email" name="email" id="email_form" placeholder="Email">
-                        <small>Erroor message</small>
-                    </div>  
-                    <div class="formOption">                     
-                        <textarea name="message" id="message_form" onkeyup="charCount(this);" placeholder="Your Message"></textarea>
-                        <p id="characterCount"><span id="numberOfChar">0</span>/140</p>
-                        <small>Erroor message</small>
-                    </div>
+        
+                        <textarea name="message" id="message_form" placeholder="Your Message"></textarea>
+
                     <button type="submit" id="formSubmit" class="button"> Submit </button>
                     <!--<span id="successmessage">Your message</span>-->
                 </form>
