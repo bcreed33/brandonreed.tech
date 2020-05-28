@@ -243,18 +243,15 @@
                 <h2>Contact Me</h2>
                 <hr>
                 <form name="contact" method="POST" data-netlify="true" id="my_form">
-                        <p>
-                          <label>Your Name: <input type="text" name="name" /></label>   
-                        </p>
-                        <p>
-                          <label>Your Email: <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                          <label>Message: <textarea name="message"></textarea></label>
-                        </p>
-                        <p>
-                          <button type="submit">Send</button>
-                        </p>
+
+                          <input type="text" name="name" placeholder="Name" id="name_form"/>
+
+                          <input type="email" name="email" placeholder="Email" id="email_form"/>
+
+                          <textarea name="message" id="message_form" onkeyup="charCount(this);" placeholder="Your Message"></textarea>
+
+                          <button type="submit" id="formSubmit" class="button">Send</button>
+
                       </form>
             </div>
         </div>
