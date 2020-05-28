@@ -262,16 +262,17 @@ window.addEventListener('scroll', function(e){
 
 
 
-//const form = document.getElementById('form');
-const formSub = document.getElementById('formSubmit');
+const form = document.getElementById('my_form');
+const formSub = document.querySelector('.button.formSubmit')
 const name = document.getElementById('name_form');
 const email = document.getElementById('email_form');
 const message = document.getElementById('message_form');
-formSub.addEventListener('click', function (e){
-     e.preventDefault();
+/*form.addEventListener('submit', logSubmit);
+function logSubmit(e){
+     //e.preventDefault();
      checkInputs();
- });
-
+ };
+*/
 //Im thinking there should be a better way to write this. 
 document.querySelector('#name_form').addEventListener('keydown', clearError);
 document.querySelector('#email_form').addEventListener('keydown', clearError);

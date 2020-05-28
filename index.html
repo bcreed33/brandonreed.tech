@@ -242,15 +242,21 @@
                 <img src="img/svgicons/005-mail.png" alt="portfolio icon" class="sectionIcon">
                 <h2>Contact Me</h2>
                 <hr>
-                <form name="contact" method="POST" data-netlify="true" id="my_form">
-
-                          <input type="text" name="name" placeholder="Name" id="name_form"/>
-
-                          <input type="email" name="email" placeholder="Email" id="email_form"/>
-
-                          <textarea name="message" id="message_form" placeholder="Your Message"></textarea>
-
-                          <button type="submit" id="formSubmit" class="button">Send</button>
+                <form name="contact" method="POST" data-netlify="true" id="my_form" action="/#contactScroll" autocomplete="off">
+                    <div class="formOption">
+                        <input autocomplete="!off" name="name" id="name_form" type="text" placeholder="Name" required>
+                        <small>Erroor message</small>
+                    </div>
+                    <div class="formOption">
+                        <input name="email" id="email_form" type="email" placeholder="Email" required>
+                        <small>Erroor message</small>
+                    </div>  
+                    <div class="formOption">                     
+                        <textarea name="message" id="message_form" type="text" onkeyup="charCount(this);" placeholder="Your Message" required></textarea>
+                        <p id="characterCount"><span id="numberOfChar">0</span>/140</p>
+                        <small>Erroor message</small>
+                    </div>
+                          <button type="submit" class="button formSubmit">Submit</button>
 
                       </form>
             </div>
@@ -258,6 +264,10 @@
 
 
 <script type="text/javascript">
+
+function formalert(){
+alert('you sub the form');
+}
 const urlHash = location.hash;
 console.log(urlHash);
 if( urlHash === "#netFormSub"){
