@@ -53,29 +53,35 @@ function logKey(e) {
 ////All my portfolio peices info. Hope soon to transfer this info into a headless cms platform
 const portP =[{
     portfolio_id : "0",
-    portfolio_title : "4moms - Shopify",
-    portfolio_imageUrl : "img/tpfCapture.jpg",
+    portfolio_title : "4moms",
+    portfolio_imageUrl : "img/4moms/4moms-preview.png",
     portfolio_githubUrl: "http://www.tapolcifoundation.org/",
     portfolio_url : "http://www.tapolcifoundation.org/",
     portfolio_copy : "For the Tapolci Foundation website, I worked with a team and was responsible for all the front-end related tasks. I made sure the website was fully responsive and took care of other things like typography, creating custom graphics, and taking the photographs that were shown on the website.",
     portfolio_talent : ["talent4", "talent5","talent6"],
     portfolio_screenShots : {
-        screenShot: "img/old4momsDesktop.jpg",
-        screenShot2: "img/old4momsDesktop.jpg",
-        screenShot3: "img/old4momsDesktop.jpg",
-        screenShot4: "img/old4momsDesktop.jpg"
+        screenShot: "img/4moms/4moms-homepage.png",
+        screenShot2: "img/4moms/4moms-pdp.png",
+        screenShot3: "img/4moms/4moms-shopall.png",
+        screenShot4: "img/4moms/4moms-cares.png"
 
     }
 },{
     portfolio_id : "1",
-    portfolio_title : "4moms - BigComm",
-    portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
+    portfolio_title : "4moms (Pre-2020)",
+    portfolio_imageUrl : "img/old4moms/old4moms-preview.png",
     portfolio_githubUrl: "",
     portfolio_url : "http://thebattersbox.letsreedesign.com/",
     portfolio_copy : "The Batters Box is a fictitious restaurant that I came up with. I first developed the website statically then converted it over to a WordPress platform. This website is my playground for WordPress development, whenever I learn something new about WordPress this will be the place where I try it out. Right now this website use plugins such as ACF, contact form 7, icegram, and The Events Calendar.",
     portfolio_talent : ["talent14", "talent15","talent16"],
     portfolio_screenShots : {
-        screenShot: "img/svgicons/logo.svg"
+        screenShot: "img/old4moms/old4moms-mobile.jpg",
+        screenShot2: "img/old4moms/old4moms-homepage.png",
+        screenShot3: "img/old4moms/old4moms-sdp.png",
+        screenShot4: "img/old4moms/old4moms-pdp.png",
+        screenShot5: "img/old4moms/old4moms-support.png",
+        screenShot6: "img/old4moms/old4moms-international.png"
+
 
     }
 },{
@@ -267,10 +273,10 @@ const formSub = document.getElementById('formSubmit');
 const name = document.getElementById('name_form');
 const email = document.getElementById('email_form');
 const message = document.getElementById('message_form');
-formSub.addEventListener('click', function (e){
+/*formSub.addEventListener('click', function (e){
      e.preventDefault();
      checkInputs();
- });
+ });/*/
 
 //Im thinking there should be a better way to write this. 
 document.querySelector('#name_form').addEventListener('keydown', clearError);
