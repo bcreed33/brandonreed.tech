@@ -100,7 +100,7 @@ const portP =[{
 },{
     portfolio_id : "3",
     portfolio_title : "The Batters Box",
-    portfolio_imageUrl : "img/goingDeeperScreenGrab.jpg",
+    portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
     portfolio_githubUrl: "",
     portfolio_url : "https://goingdeeperconference.letsreedesign.com/",
     portfolio_copy : "This project needed a quick turn-a-around time of two weeks, due to the event quickly approaching. So with a short timeline, I used webflow to allow me to produce a website demo within a day. After I got the go-ahead form the demo, I worked on completing the static website. Phase two of this project was converting the static website into a WordPress website. With the use of Advanced Custom Fields, I gave my client complete control of all their content, on the website.",
@@ -110,19 +110,6 @@ const portP =[{
         screenShot2: "img/goingDeeperScreenGrab.jpg"
 
     }
-},{
-    portfolio_id : "4",
-    portfolio_title : "Going Deeper",
-    portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
-    portfolio_githubUrl: "",
-    portfolio_url : "http://thebattersbox.letsreedesign.com/",
-    portfolio_copy : "The Batters Box is a fictitious restaurant that I came up with. I first developed the website statically then converted it over to a WordPress platform. This website is my playground for WordPress development, whenever I learn something new about WordPress this will be the place where I try it out. Right now this website use plugins such as ACF, contact form 7, icegram, and The Events Calendar.",
-    portfolio_talent : ["talent44", "talent45","talent46"],
-    portfolio_screenShots : {
-        screenShot: "img/svgicons/logo.svg",
-        screenShot2: "img/goingDeeperScreenGrab.jpg"
-
-    }             
 }];
 
 console.log(portP[1].portfolio_hasurl);
@@ -174,8 +161,8 @@ const screenShotImages = screenShotList.map( imgURL => `
     <div class="screenshotOverlay"></div>
     <img class="screenshotImage"  src="${imgURL}">
     <div class="screenshotContent fadeIn-bottom">
-        <img class="screenshotOverlayImage" src="img/svgicons/006-cv-white.png">
-        <p>Click To View More</p>
+        <img class="screenshotOverlayImage" src="img/svgicons/002-website.png">
+        <p>View More</p>
     </div>
 </div>`).join('');
 
