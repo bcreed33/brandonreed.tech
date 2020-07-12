@@ -169,7 +169,7 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     width: auto;
     display: block;
     margin: 0 auto;
-    padding: 10px
+    //padding: 10px
 }
 /*
 .portfolio-piece a{
@@ -223,6 +223,7 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
 .portfolioImages{
     display: flex;
     flex-flow: row wrap;
+
 }
 
 
@@ -237,6 +238,9 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     max-height: 300px;
     margin: 10px auto;
     overflow: hidden;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(1,1,1,.25);
+box-shadow: 1px 1px 5px 1px rgba(1,1,1,.25);
+flex-basis: 45%;
 }
 
 .screenshotOverlayContents {
@@ -247,7 +251,7 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
   }
   
  .screenshotOverlay {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -287,9 +291,13 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     color: white;
   }
   .screenshotContent .screenshotOverlayImage{
-      width: 125px;
+      width: 75px;
       display: block;
-
+  }
+  .screenshotContent p{
+      color:#e98324;
+      font-weight: bolder;
+      font-size: 1.5em;
   }
   
   .screenshotOverlayContents:hover .screenshotContent{
@@ -325,7 +333,10 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     }
     .portfolioImages .screenshotOverlayContents{
         max-height: 350px;
-        flex-basis: 50%;
+        flex-basis: 47.5%;
+        margin: 2% auto;
+        border: 3px solid rgba(1, 1, 1, 0.9);
+        border-radius: 15px;
     }
 }
 

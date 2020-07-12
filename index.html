@@ -189,7 +189,6 @@
             </div>
         </div>
     </div>
-    <hr>
     <a name="portfolio" id="portScroll"></a>
 </div>
 
@@ -219,13 +218,15 @@
 
 <div class="transitionSectiontop"></div>
 <div class="CTAbanner">
-    <img src="img/svgicons/006-cv-white.png" alt="portfolio icon" class="sectionIcon">
+   
     <div class="container" id="CTAcontent">
     <div class="text-center">    
+        <img src="img/svgicons/006-cv-white.png" alt="portfolio icon" class="sectionIcon">
         <h3>View My Resume</h3>
-        <a href="https://github.com/bcreed33" target="_blank" class="button">Visit</a>
+        <a href="img/BrandonReed-resume.pdf" target="_blank" class="button">Visit</a>
     </div>
-    <div class="text-center">    
+    <div class="text-center">  
+        <img src="img/svgicons/009-github-white.png" alt="portfolio icon" class="sectionIcon">  
         <h3>Visit My Github</h3>
         <a href="https://github.com/bcreed33" target="_blank" class="button">Visit</a>
     </div>
@@ -237,30 +238,32 @@
 
 
 
-        <div class="container">
-            <div class="contactFormSection">
-                <img src="img/svgicons/005-mail.png" alt="portfolio icon" class="sectionIcon">
-                <h2>Contact Me</h2>
-                <hr>
-                <form name="contact" method="POST" data-netlify="true" id="my_form" action="/#contactScroll" autocomplete="off">
-                    <div class="formOption">
-                        <input autocomplete="!off" name="name" id="name_form" type="text" placeholder="Name" required>
-                        <small>Erroor message</small>
-                    </div>
-                    <div class="formOption">
-                        <input name="email" id="email_form" type="email" placeholder="Email" required>
-                        <small>Erroor message</small>
-                    </div>  
-                    <div class="formOption">                     
-                        <textarea name="message" id="message_form" type="text" onkeyup="charCount(this);" placeholder="Your Message" required></textarea>
-                        <p id="characterCount"><span id="numberOfChar">0</span>/140</p>
-                        <small>Erroor message</small>
-                    </div>
-                          <button type="submit" class="button formSubmit">Submit</button>
-
-                      </form>
+<div class="container">
+    <div class="contactFormSection">
+        <img src="img/svgicons/005-mail.png" alt="portfolio icon" class="sectionIcon">
+        <h2>Contact Me</h2>
+        <hr>
+        <form name="contact" method="POST" data-netlify="true" id="my_form" action="/" autocomplete="off">
+            <div class="formOption">
+                <input autocomplete="!off" name="name" id="name_form" type="text" placeholder="Name" required>
+                <small>Erroor message</small>
             </div>
-        </div>
+            <div class="formOption">
+                <input name="email" id="email_form" type="email" placeholder="Email" required>
+                <small>Erroor message</small>
+            </div>  
+            <div class="formOption">                     
+                <textarea name="message" id="message_form" type="text" onkeyup="charCount(this);" placeholder="Your Message" required></textarea>
+                <p id="characterCount"><span id="numberOfChar">0</span>/140</p>
+                <small>Erroor message</small>
+            </div>
+                  <button type="submit" class="button formSubmit">Submit</button>
+
+              </form>
+    </div>
+</div>
+
+
 
 
 <script type="text/javascript">

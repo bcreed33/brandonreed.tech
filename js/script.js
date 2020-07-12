@@ -53,70 +53,62 @@ function logKey(e) {
 ////All my portfolio peices info. Hope soon to transfer this info into a headless cms platform
 const portP =[{
     portfolio_id : "0",
-    portfolio_title : "4moms - Shopify",
-    portfolio_imageUrl : "img/tpfCapture.jpg",
-    portfolio_githubUrl: "http://www.tapolcifoundation.org/",
-    portfolio_url : "http://www.tapolcifoundation.org/",
-    portfolio_copy : "For the Tapolci Foundation website, I worked with a team and was responsible for all the front-end related tasks. I made sure the website was fully responsive and took care of other things like typography, creating custom graphics, and taking the photographs that were shown on the website.",
-    portfolio_talent : ["talent4", "talent5","talent6"],
+    portfolio_title : "4moms",
+    portfolio_imageUrl : "img/4moms/4moms-preview.png",
+    portfolio_githubUrl: "",
+    portfolio_url : "https://goingdeeperconference.letsreedesign.com/",
+    portfolio_copy : "The current 4moms website is on the Shopify Plus platform with our support center on zendesk. That fact that the vast majority of our domestic web presence is now all on one URL/ framework is extremely beneficial for us. It's useful not only for me as the developer but for analytical tracking and user experiences. ",
+    portfolio_talent : ["Shopify", "Zendesk","Amazon s3"],
     portfolio_screenShots : {
-        screenShot: "img/old4momsDesktop.jpg",
-        screenShot2: "img/old4momsDesktop.jpg",
-        screenShot3: "img/old4momsDesktop.jpg",
-        screenShot4: "img/old4momsDesktop.jpg"
+        screenShot: "img/4moms/4moms-homepage.png",
+        screenShot2: "img/4moms/4moms-pdp.png",
+        screenShot3: "img/4moms/4moms-shopall.png",
+        screenShot4: "img/4moms/4moms-cares.png"
 
     }
 },{
     portfolio_id : "1",
-    portfolio_title : "4moms - BigComm",
-    portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
+    portfolio_title : "4moms (Pre-2020)",
+    portfolio_imageUrl : "img/old4moms/old4moms-preview.png",
     portfolio_githubUrl: "",
-    portfolio_url : "http://thebattersbox.letsreedesign.com/",
-    portfolio_copy : "The Batters Box is a fictitious restaurant that I came up with. I first developed the website statically then converted it over to a WordPress platform. This website is my playground for WordPress development, whenever I learn something new about WordPress this will be the place where I try it out. Right now this website use plugins such as ACF, contact form 7, icegram, and The Events Calendar.",
-    portfolio_talent : ["talent14", "talent15","talent16"],
+    portfolio_url : "",
+    portfolio_copy : "The Pre-2020 4moms website / domestic web presence was composed of two different websites. One was our brochure-style website that was built on a ruby on rails platform. The other was our shop website that was built on a BigCommers platform. We use a handful of third party plugins and homegrown software that was also a vital part of this website tech stack.",
+    portfolio_talent : ["BigCommerce", "Ruby on Rails"],
     portfolio_screenShots : {
-        screenShot: "img/svgicons/logo.svg"
+        screenShot: "img/old4moms/old4moms-mobile.jpg",
+        screenShot2: "img/old4moms/old4moms-homepage.png",
+        screenShot3: "img/old4moms/old4moms-sdp.png",
+        screenShot4: "img/old4moms/old4moms-pdp.png",
+        screenShot5: "img/old4moms/old4moms-support.png",
+        screenShot6: "img/old4moms/old4moms-international.png"
+
 
     }
 },{
     portfolio_id : "2",
     portfolio_title : "Javascript Apps",
-    portfolio_imageUrl : "img/goingDeeperScreenGrab.jpg",
-    portfolio_githubUrl: "",
-    portfolio_url : "https://goingdeeperconference.letsreedesign.com/",
-    portfolio_copy : "This project needed a quick turn-a-around time of two weeks, due to the event quickly approaching. So with a short timeline, I used webflow to allow me to produce a website demo within a day. After I got the go-ahead form the demo, I worked on completing the static website. Phase two of this project was converting the static website into a WordPress website. With the use of Advanced Custom Fields, I gave my client complete control of all their content, on the website.",
-    portfolio_talent : ["talent24", "talent25","talent26"],
+    portfolio_imageUrl : "img/javascriptLandingpage.png",
+    portfolio_githubUrl: "https://github.com/bcreed33/javascriptAppCollection",
+    portfolio_url : "https://apps.brandonreed.tech/",
+    portfolio_copy : "Here's a gallery of javascript app that I have created. I have created some of them from scratch, from a tutorial or a combination of both. I'm always working on some new apps. So checkout out my GitHub to see what I'm working on.",
+    portfolio_talent : ["Vanilla JavaScript"],
     portfolio_screenShots : {
-        screenShot: "img/svgicons/logo.svg",
-        screenShot2: "img/goingDeeperScreenGrab.jpg"
+        screenShot: "img/javascriptLandingpage2.png"
 
     }
 },{
     portfolio_id : "3",
     portfolio_title : "The Batters Box",
-    portfolio_imageUrl : "img/goingDeeperScreenGrab.jpg",
-    portfolio_githubUrl: "",
-    portfolio_url : "https://goingdeeperconference.letsreedesign.com/",
-    portfolio_copy : "This project needed a quick turn-a-around time of two weeks, due to the event quickly approaching. So with a short timeline, I used webflow to allow me to produce a website demo within a day. After I got the go-ahead form the demo, I worked on completing the static website. Phase two of this project was converting the static website into a WordPress website. With the use of Advanced Custom Fields, I gave my client complete control of all their content, on the website.",
-    portfolio_talent : ["talent34", "talent35","talent36"],
+    portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
+    portfolio_githubUrl: "https://goingdeeperconference.letsreedesign.com/",
+    portfolio_url : "https://battersbox.brandonreed.tech/",
+    portfolio_copy : "The Batters Box is a fictitious restaurant that I created. Originally this website was a WordPress website. Its currently a statice website that I use as a playground for anything new that I might learn. ",
+    portfolio_talent : ["JavaScript"],
     portfolio_screenShots : {
-        screenShot: "img/svgicons/logo.svg",
-        screenShot2: "img/goingDeeperScreenGrab.jpg"
+        screenShot: "img/battersBox/batterboxHome.jpg",
+        screenShot2: "img/battersBox/batterboxMenu.png"
 
     }
-},{
-    portfolio_id : "4",
-    portfolio_title : "Going Deeper",
-    portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
-    portfolio_githubUrl: "",
-    portfolio_url : "http://thebattersbox.letsreedesign.com/",
-    portfolio_copy : "The Batters Box is a fictitious restaurant that I came up with. I first developed the website statically then converted it over to a WordPress platform. This website is my playground for WordPress development, whenever I learn something new about WordPress this will be the place where I try it out. Right now this website use plugins such as ACF, contact form 7, icegram, and The Events Calendar.",
-    portfolio_talent : ["talent44", "talent45","talent46"],
-    portfolio_screenShots : {
-        screenShot: "img/svgicons/logo.svg",
-        screenShot2: "img/goingDeeperScreenGrab.jpg"
-
-    }             
 }];
 
 console.log(portP[1].portfolio_hasurl);
@@ -168,8 +160,8 @@ const screenShotImages = screenShotList.map( imgURL => `
     <div class="screenshotOverlay"></div>
     <img class="screenshotImage"  src="${imgURL}">
     <div class="screenshotContent fadeIn-bottom">
-        <img class="screenshotOverlayImage" src="img/svgicons/006-cv-white.png">
-        <p>Click To View More</p>
+        <img class="screenshotOverlayImage" src="img/svgicons/002-website.png">
+        <p>View More</p>
     </div>
 </div>`).join('');
 
@@ -193,10 +185,10 @@ return `
             </div>
         </div>
         <div class="linkSection">
-            <button href="${x.portfolio_url}" target="_blank" class="button urlBtn text-center">
+            <a href="${x.portfolio_url}" target="_blank" class="button urlBtn text-center">
                 Launch Site
             </a>
-            <button href="${x.portfolio_githubUrl}" target="_blank" class="button githubBtn text-center">
+            <a href="${x.portfolio_githubUrl}" target="_blank" class="button githubBtn text-center">
                 View Code
             </a>
         </div>
@@ -267,12 +259,11 @@ const formSub = document.querySelector('.button.formSubmit')
 const name = document.getElementById('name_form');
 const email = document.getElementById('email_form');
 const message = document.getElementById('message_form');
-/*form.addEventListener('submit', logSubmit);
-function logSubmit(e){
-     //e.preventDefault();
+/*formSub.addEventListener('click', function (e){
+     e.preventDefault();
      checkInputs();
- };
-*/
+ });/*/
+
 //Im thinking there should be a better way to write this. 
 document.querySelector('#name_form').addEventListener('keydown', clearError);
 document.querySelector('#email_form').addEventListener('keydown', clearError);
