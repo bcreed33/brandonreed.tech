@@ -93,7 +93,10 @@ footer{
 
 }
 
-button.nolink{
+a.nolink{
+  display: none;
+}
+.emptySection{
   display: none;
 }
 
