@@ -1,3 +1,24 @@
+
+
+var portfolioPieces = [];
+const endpoint = "../js/portfolioData.json";
+fetch(endpoint)
+    .then(blob => blob.json())
+    .then(data => portfolioPieces.push(...data.portfolio_Piece));
+
+
+    console.log(portfolioPieces);
+    console.log('tbale');
+/*
+import {lightBoxFunctions, openClosePortfolioDrawers }from './portfolioDrawerFunctions.js'
+setTimeout( openClosePortfolioDrawers() , 1);
+lightBoxFunctions();*/
+import {porfolio_Bios , portfolio_Pieces } from './portfolioDrawerUI.js';
+porfolio_Bios(portfolioPieces);
+portfolio_Pieces(portfolioPieces);
+
+
+
 //Js for the menu button
 const navTrigger = document.querySelector('.nav-trigger');
 navTrigger.addEventListener('click', function(e) {
@@ -5,15 +26,14 @@ navTrigger.addEventListener('click', function(e) {
   this.classList.toggle('is-active');
 }, false);
 
-
 //////js that is displaying my portfolio cards
 const porfolioCards = portfolioPieces.map(x =>
-    `<li data-type="portfolio-${x.portfolio_id}" onclick="myScript(this);">
+    `<li data-type="portfolio-${x.portfolio_id}" onclick="openPortfolioPiece(this);">
         <a data-type="portfolio-${x.portfolio_id}">
             <div class="portPeicePreview" style="background-image: url(../${x.portfolio_imageUrl});">
                 <div class="portPeiceTitle">
                     <h3>${x.portfolio_title}</h3>
-                    <button data-type="member-${x.portfolio_id}" onclick="myScript(this);">More Info</button>
+                    <button data-type="member-${x.portfolio_id}" onclick="openPortfolioPiece(this);">More Info</button>
                 </div>
             </div>
         </a>

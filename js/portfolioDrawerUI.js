@@ -1,5 +1,10 @@
-    //////js that is filling out the info for the portfolio slide-out boxes
-    const porfolioBios = portfolioPieces.map(function (x){
+export function porfolio_Bios(wass){
+
+    console.log(wass);
+    console.log('wass');
+
+//////js that is filling out the info for the portfolio slide-out boxes
+    const porfolioBios = wass.map(function (x){
         const talentList = x.portfolio_talent;
         //Mapping through the talent list array
         const talentListMapped = talentList.map(talent => `<p>${talent}</p>`).join('');
@@ -49,10 +54,14 @@
         </div>
         ` 
         }).join('');
-
-
-
         document.querySelector('#portfolioBios').innerHTML= porfolioBios;
+
+        console.log(porfolioBios);
+        console.log('porfolioBios');
+    };
+
+    
+export function portfolio_Pieces(portfolioPieces){
         portfolioPieces.map( function (x){
             const portfolioNumber = x.portfolio_id;
             const p = portfolioNumber.toString();
@@ -65,4 +74,5 @@
                 linkBtns.classList.add("nolink");
              };
         });
-        
+
+    };

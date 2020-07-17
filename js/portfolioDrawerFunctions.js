@@ -1,6 +1,7 @@
 //////js for my portfolio slideout boxes
 //This is going to open my portfolio peices based off the data attribute I sent for each peice. 
-function myScript(x){
+
+function openPortfolioPiece(x){
     const selected_portfolio= x.getAttribute('data-type');
     console.log(selected_portfolio);    
     document.querySelector('body').className="freeze";
@@ -17,12 +18,6 @@ function closePortfolioSelection(){
     document.querySelector('.portfolio-piece.slide-in').classList.remove("slide-in");
     document.querySelector('.portfolio-close').classList.remove("is-visible");
 };
-
-
-
-
-
-
 
 
 
