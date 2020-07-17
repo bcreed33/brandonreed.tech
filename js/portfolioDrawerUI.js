@@ -55,9 +55,6 @@ export function porfolio_Bios(wass){
         ` 
         }).join('');
         document.querySelector('#portfolioBios').innerHTML= porfolioBios;
-
-        console.log(porfolioBios);
-        console.log('porfolioBios');
     };
 
     
