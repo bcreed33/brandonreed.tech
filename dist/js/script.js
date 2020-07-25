@@ -52,20 +52,3 @@ window.addEventListener('scroll', function(e){
     const logo = document.querySelector('.standAlonelogo');
     logo.style.transform = `translate3d(0px, ${scrolled * 1.25}px, 0px )`;
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
