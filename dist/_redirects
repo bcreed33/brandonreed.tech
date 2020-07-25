@@ -1,5 +1,2 @@
-/thanks /thankyou 302!
-/thanks/ /thankyou 302!
-/thanks/index.html /thankyou 302!
-/thankyou /thanks/index.html 200!
+/thanks/index.html /thanks 302!
 /index.html / 302!
