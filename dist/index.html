@@ -256,10 +256,10 @@
             </div>  
             <div class="formOption">                     
                 <textarea name="message" id="message_form" type="text" onkeyup="charCount(this);" placeholder="Your Message" required></textarea>
-                <p id="characterCount"><span id="numberOfChar">0</span>/140</p>
+                <!--<p id="characterCount"><span id="numberOfChar">0</span>/140</p>-->
                 <small>Erroor message</small>
             </div>
-                  <button type="submit" class="button formSubmit">Submit</button>
+                  <button type="submit" class="button formSubmit" id="formSubmit">Submit</button>
 
               </form>
     </div>
@@ -346,6 +346,7 @@ if( urlHash === "#netFormSub"){
 <script src="js/portfolioData.js"></script>
 <script src="js/portfolioDrawerFunctions.js"></script>
 <script src="js/portfolioDrawerUI.js"></script>
+<script src="js/formValidation.js"></script>
 <script src="js/script.js"></script>
 
 <script type="text/javascript">
