@@ -924,6 +924,10 @@ text-align: center;}
   padding: 25px 0;
 }
 
+.sectionIcon{
+  margin-top: 15px;
+}
+
 .transitionSectiontop{
   background-image: url(../img/orangeSectionCurvetop.png);
   background-repeat: no-repeat;
@@ -959,7 +963,7 @@ text-align: center;}
   -webkit-box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
   box-shadow: 0 0 10px 1px rgba(1,1,1,.25);
   background-color: #fff;
-  padding:50px 0 35px;
+  padding:35px 0px;
   border: 2px lightgray solid;
   border-radius: 10px;
   margin-top: 0px;

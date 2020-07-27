@@ -1,12 +1,16 @@
 //const form = document.getElementById('form');
 const formSub = document.getElementById('formSubmit');
+//const formSub = document.getElementsByClassName('formSubmit');
 const name = document.getElementById('name_form');
 const email = document.getElementById('email_form');
 const message = document.getElementById('message_form');
 /*formSub.addEventListener('click', function (e){
      e.preventDefault();
      checkInputs();
- });/*/
+ });*/
+
+
+ //formSub.addEventListener('click', checkInputs());
 
 //Im thinking there should be a better way to write this. 
 document.querySelector('#name_form').addEventListener('keydown', clearError);
