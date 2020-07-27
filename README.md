@@ -1,2 +1,2 @@
-# portfoliosite
+# BrandonReed.tech
 
