@@ -21,7 +21,7 @@ MEDIA QUERIES
 /*Global styles///////////////////////////////////////////////////////////////*/
 @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Maven+Pro:wght@400;500&display=swap');
 h1, h2, h3, h4, h5 {
-  font-family: "Glegoo", serif !important; 
+  font-family: 'Glegoo', serif; 
 }
 
 p, li, a, #subbtn, input, textarea {
@@ -121,7 +121,7 @@ a.nolink{
   background-position: 50% 50%;
   width: 100%;
   padding: 0%;
-  min-height: 525px;
+  min-height: 550px;
   overflow: hidden;
 }
 
@@ -319,6 +319,8 @@ text-align: center;}
 @media only screen and (min-width: 900px){
   .heroBackgroundImage {
     height: calc(100vh - 80px);
+    min-height: 700px;
+
   }
 }
 
