@@ -1,10 +1,17 @@
 //Js for the menu button
 const navTrigger = document.querySelector('.nav-trigger');
-navTrigger.addEventListener('click', function(e) {
-  e.preventDefault();
+navTrigger.addEventListener('click', function() {
   this.classList.toggle('is-active');
 }, false);
 
+const mobileMenuOption = document.getElementsByClassName("nav-item");
+let closeMenu = function() {
+    document.querySelector('.nav-trigger').classList.remove('is-active');
+    document.querySelector('#navbarNav').classList.remove('show');
+};
+Array.from(mobileMenuOption).forEach(function(mobileMenuOption) {
+    mobileMenuOption.addEventListener('click', closeMenu);
+  });
 
 //////js that is displaying my portfolio cards
 const porfolioCards = portfolioPieces.map(x =>
