@@ -18,14 +18,31 @@ MEDIA QUERIES
 */
 
 
-/*Global styles///////////////////////////////////////////////////////////////*/
+/*Global styles///////////////////////////////////////////////////////////////
 @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Maven+Pro:wght@400;500&display=swap');
+*/
+
+@font-face {
+  font-family: 'GlegooBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Glegoo/Glegoo-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'mavenProReg';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Maven_Pro/static/MavenPro-Regular.ttf');
+}
+
+
 h1, h2, h3, h4, h5 {
-  font-family: 'Glegoo', serif; 
+  font-family: 'GlegooBold', serif; 
 }
 
 p, li, a, #subbtn, input, textarea {
-  font-family: 'Maven Pro', sans-serif !important;
+  font-family: 'mavenProReg', sans-serif !important;
 }
 
 .heroblackOpicty {
@@ -133,7 +150,7 @@ a.nolink{
   margin: 0 auto;
   padding: 0;
   z-index: 9999px;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'mavenProReg', sans-serif;
   padding-top:5%;
 }
 
@@ -912,6 +929,9 @@ text-align: center;}
 #CTAcontent div{
   flex: 1;
   flex-basis: 40%;
+}
+#CTAcontent h3{
+  color:#fff;
 }
 
 .CTAbanner h2{
