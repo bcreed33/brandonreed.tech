@@ -216,7 +216,7 @@ box-shadow:inset 1px 1px 12px 1px rgba(1,1,1,.25);
     max-width: 500px;
     margin: 20px auto;
 }
-.linkSection button{
+.linkSection a{
     margin: 10px auto;
 }
 
