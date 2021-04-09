@@ -1,0 +1,12 @@
+.heroBackgroundImage {
+    height: calc(80vh - 80px);
+    background: url("../img/newHero1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    padding: 0%;
+    min-height: 550px;
+    overflow: hidden;
+  }
+  
