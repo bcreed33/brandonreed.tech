@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N27SMMD');</script>
-  <!-- End Google Tag Manager -->
+    <script>
+        var pic = new Image();
+        pic.src="./img/newHero1.png";
+    </script>
 <meta name="keywords" content="photographer, photography, design, web developer graphic designer, web developer, web designer, graphic artist, visual designer, visual artist">
 <meta name="description" content="Hello my name is Brandon Reed, and this my portfilio website. I am a front end web developer, a graphic designer, and a photohrapher. I am located in the Pittsburgh area, and currently taking on more freelance clients. "/>
-<meta name="viewport" content="initial-scale=1.0,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+<!-- <meta name="viewport" content="initial-scale=1.0,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no" /> -->
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta charset="utf-8">
 <link href="img/favicon.ico" type="image/x-icon" rel="shorcut icon">
 <title>Brandon Reed - Web Developer</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
 <!--preloading the hero image-->
-<script>
-    var pic = new Image();
-    pic.src="img/newHero1.png";
-</script>
+
 <!--structured Data-->
 <script type="application/ld+json">
     {
         "@context" : "http://schema.org",
         "@type" : "CreativeWorkSeries",
         "name":"Brandon Reed",
-        "url":"http://letsreedesign.com/",
+        "url":"http://brandonreed.tech/",
         "image":"http://letsreedesign.com/img/letterB.png",
         "headline":"Welcome to Brandon Reed's portfolio website!",
         "sameAs":[
@@ -39,18 +33,15 @@
 </script>
 
 <!-- All my custom css code"-->
+<link href="css/hero.css" rel="stylesheet">
 <link href="css/sideBox.css" rel="stylesheet">
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
-
 <link href="css/menu.css" rel="stylesheet">
-
 </head>
-
-
 <body>
-<a name="home" id="homeScroll"></a>
+<a id="homeScroll"></a>
 <main>
     <div class="heroBackgroundImage">
         <div class="heroblackOpicty">
@@ -105,8 +96,8 @@
 
 
 
-<a name="contact" id="bioScroll"></a>
-<div class="containe-fluid sectionSpacing orangeSec">
+<a id="bioScroll"></a>
+<section class="containe-fluid sectionSpacing orangeSec">
     <div class="container">
         <div class="row aboutsection">
             <div class="col-sm-10 col-xs-12 myblurb">
@@ -143,21 +134,21 @@
                         </div>
                         <div class="smIcon">
                             <a href="#contactScroll" target="_blank">
-                                <img src="img/svgicons/012-email-white.png" alt="Smugmug Logo"onmouseover="this.src= 'img/svgicons/012-email-black.png'" onmouseout="this.src='img/svgicons/012-email-white.png'">
+                                <img src="img/svgicons/012-email-white.png" alt="Smugmug Logo" onmouseover="this.src= 'img/svgicons/012-email-black.png'" onmouseout="this.src='img/svgicons/012-email-white.png'">
                             </a>
                         </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <div class="transitionSection">
     <span class="orangeBar"></span>
 </div>
 <div class="containe-fluid  sectionSpacing ">
     <div class="container">
         <div class="row">
-            <div class="skillSection">
+            <section class="skillSection">
                 <div class="skillrow">
                     <img src="img/svgicons/008-browser.png" alt="portfolio icon" class="sectionIcon">
                     <h2>Skill Set</h2>
@@ -188,30 +179,30 @@
                         <li>Sketch/Photoshop</li>
                     </ul>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
-    <a name="portfolio" id="portScroll"></a>
+    <a id="portScroll"></a>
 </div>
 
 
 <div class="sectionSpacing ">
     <div class="container">
         <div class="row">
-            <div id="webDesign" class='portfolioSection'>
+            <section id="webDesign" class='portfolioSection'>
                 <img src="img/svgicons/001-responsive.png" alt="portfolio icon" class="sectionIcon">
                 <h2>My Portfolio</h2>
                 <hr>
                 <p>Here are a few of my most recent projects:</p>
-                <section class="portfolio-section">
+                <div class="portfolio-section">
                     <div class="portfolio-container">
                     <ul id="portPPP">
-                        <p>Currently working on getting my portfilio work in tip-top shape!</p>
+                        <li>Currently working on getting my portfilio work in tip-top shape!</li>
                     <!--This section will be populated by my javascript-->      
                      </ul>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
     </div>
 </div>
@@ -221,7 +212,7 @@
 <div class="transitionSectiontop"></div>
 <div class="CTAbanner">
    
-    <div class="container" id="CTAcontent">
+    <section class="container" id="CTAcontent">
     <div class="text-center">    
         <img src="img/svgicons/006-cv-white.png" alt="portfolio icon" class="sectionIcon">
         <h3>View My Resume</h3>
@@ -232,8 +223,8 @@
         <h3>Visit My Github</h3>
         <a href="https://github.com/bcreed33" target="_blank" class="button">Visit</a>
     </div>
-</div>
-    <a name="contact" id="contactScroll"></a>
+</section>
+    <a id="contactScroll"></a>
 </div>
 <div class="transitionSectionbottom"></div>
 
@@ -241,7 +232,7 @@
 
 
 <div class="container">
-    <div class="contactFormSection">
+    <section class="contactFormSection">
         <img src="img/svgicons/005-mail.png" alt="portfolio icon" class="sectionIcon">
         <h2>Contact Me</h2>
         <hr>
@@ -262,14 +253,10 @@
                   <button type="submit" class="button formSubmit" id="formSubmit">Submit</button>
 
               </form>
-    </div>
+    </section>
 </div>
 
-
-
-
-<script type="text/javascript">
-
+<script>
 function formalert(){
 alert('you sub the form');
 }
@@ -278,8 +265,9 @@ console.log(urlHash);
 if( urlHash === "#netFormSub"){
     document.querySelector('#successmessage').innerHTML="Thank you for your message!";
 }
-
 </script>
+
+
 <div class="darkgreytransitionSection">
     <span class="greyBar"></span>
 </div>
@@ -305,13 +293,13 @@ if( urlHash === "#netFormSub"){
                 </div>
                 <div class="smIcon">
                     <a href="#contactScroll" target="_blank">
-                        <img src="img/svgicons/012-email-white.png" alt="Smugmug Logo"onmouseover="this.src= 'img/svgicons/012-email-orange.png'" onmouseout="this.src='img/svgicons/012-email-white.png'">
+                        <img src="img/svgicons/012-email-white.png" alt="Smugmug Logo" onmouseover="this.src= 'img/svgicons/012-email-orange.png'" onmouseout="this.src='img/svgicons/012-email-white.png'">
                     </a>
                 </div>
         </div>
         <div class="row text-center footercopy">
             <p>©
-                <script type="text/javascript">
+                <script>
                     document.write(new Date().getFullYear());
                 </script>
                 brandonreed.tech <br/> Designed & Developed <br/> by Brandon Reed
@@ -336,7 +324,7 @@ if( urlHash === "#netFormSub"){
 
 </main>
 
-<!-- portfolio slide out boxes sections---------------------------------------->
+<!-- portfolio slide out boxes sections-->
 
 
 
@@ -352,7 +340,7 @@ if( urlHash === "#netFormSub"){
 <script src="js/formValidation.js"></script>
 <script src="js/script.js"></script>
 
-<script type="text/javascript">
+<script>
     //script for the nav link scrolling
     $('a[href*=#]').on('click', function(event){
       event.preventDefault();
