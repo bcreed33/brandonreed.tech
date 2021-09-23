@@ -15,6 +15,22 @@ const portfolioPieces =[{
     }
 },{
     portfolio_id : "1",
+    portfolio_title : "BrandonReed.online",
+    portfolio_imageUrl : "img/brandonreed.online.jpg",
+    portfolio_githubUrl: "",
+    portfolio_url : "https://www.brandonreed.online",
+    portfolio_copy : "This website was designed and developed as a landing page to direct users to my web development or photography portfolio. It also doubles as a linktree replacement for my social media platforms to direct users to my other accounts & websites.",
+    portfolio_talent : ["Tailwind", "Webpack"],
+    portfolio_screenShots : {
+         //screenShot: "img/brandonreed.online.jpg",
+        // screenShot2: "img/old4moms/old4moms-homepage.png",
+        // screenShot3: "img/old4moms/old4moms-sdp.png",
+        // screenShot4: "img/old4moms/old4moms-pdp.png",
+        // screenShot5: "img/old4moms/old4moms-support.png",
+        // screenShot6: "img/old4moms/old4moms-international.png"
+    }
+},{
+    portfolio_id : "2",
     portfolio_title : "4moms (Pre-2020)",
     portfolio_imageUrl : "img/old4moms/old4moms-preview.png",
     portfolio_githubUrl: "",
@@ -30,7 +46,7 @@ const portfolioPieces =[{
         screenShot6: "img/old4moms/old4moms-international.png"
     }
 },{
-    portfolio_id : "2",
+    portfolio_id : "3",
     portfolio_title : "Javascript Apps",
     portfolio_imageUrl : "img/javascriptLandingpage.png",
     portfolio_githubUrl: "https://github.com/bcreed33/javascriptAppCollection",
@@ -41,7 +57,7 @@ const portfolioPieces =[{
         screenShot: "img/javascriptLandingpage2.png"
     }
 },{
-    portfolio_id : "3",
+    portfolio_id : "4",
     portfolio_title : "The Batters Box",
     portfolio_imageUrl : "img/battersboxScreenGrab.JPG",
     portfolio_githubUrl: "https://goingdeeperconference.letsreedesign.com/",
