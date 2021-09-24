@@ -17,7 +17,7 @@ const portfolioPieces =[{
     portfolio_id : "1",
     portfolio_title : "BrandonReed.online",
     portfolio_imageUrl : "img/brandonreed.online.jpg",
-    portfolio_githubUrl: "",
+    portfolio_githubUrl: "https://github.com/bcreed33/brandonreed.online",
     portfolio_url : "https://www.brandonreed.online",
     portfolio_copy : "This website was designed and developed as a landing page to direct users to my web development or photography portfolio. It also doubles as a linktree replacement for my social media platforms to direct users to my other accounts & websites.",
     portfolio_talent : ["Tailwind", "Webpack"],
